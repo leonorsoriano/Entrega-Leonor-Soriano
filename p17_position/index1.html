@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div.container{
+            position: relative;
+            width: 350px;
+            height: 1350px;
+            background-color: blueviolet;
+        }
+
+        div.absolute{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: chartreuse;
+            top: 1000px;
+            left: 120px;
+            z-index: 3;
+        }
+
+        div.absolute-2{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(255, 255, 255);
+            top: 120px;
+            left: 120px;
+            z-index: 2;
+        }
+
+        footer{
+            position: fixed;
+            bottom: 0;
+            z-index: 4;
+        }
+
+
+    </style>
+
+
+    <div class="container">
+        <div class="absolute"></div>
+        <div class="absolute2"></div>
+    </div>
+
+    <footer style="background-color: coral; font-family: Arial, Helvetica, sans-serif; font-size: 60px;">Esto es un footer</footer>
+</body>
+</html>

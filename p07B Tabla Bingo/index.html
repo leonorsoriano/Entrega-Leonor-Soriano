@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      table {
+            border-collapse: collapse;
+            border: 3px solid yellow;
+        }
+        td {
+            border: 2px solid yellow;
+            width: 70px;
+            height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        td.name {
+            background-color: yellow;
+            font-weight: 800;
+            width: 20%;
+            padding: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: coral;
+        }
+
+        button{
+            margin-top: 5%;
+        }
+
+
+
+    </style>
+
+<table>
+    <tbody>
+        <tr>
+            <td class="name" rowspan="4">Leo's BINGO</td>
+            <td id="cell1"></td>
+            <td id="cell2"></td>
+            <td id="cell3"></td>
+            <td id="cell4"></td>
+            <td id="cell5"></td>
+            <td id="cell6"></td>
+        </tr>
+        <tr>
+            <td id="cell7"></td>
+            <td id="cell8"></td>
+            <td id="cell9"></td>
+            <td id="cell10"></td>
+            <td id="cell11"></td>
+            <td id="cell12"></td>
+        </tr>
+        <tr>
+            <td id="cell13"></td>
+            <td id="cell14"></td>
+            <td id="cell15"></td>
+            <td id="cell16"></td>
+            <td id="cell17"></td>
+            <td id="cell18"></td>
+        </tr>
+        <tr>
+            <td id="cell19"></td>
+            <td id="cell20"></td>
+            <td id="cell21"></td>
+            <td id="cell22"></td>
+            <td id="cell23"></td>
+            <td id="cell24"></td>
+        </tr>
+    </tbody>
+</table>
+<button onclick="generateRandomNumbers()">Generar Números Aleatorios</button>
+<script>
+    function generateRandomNumbers() {
+        var cells = document.getElementsByTagName("td");
+        for (var i = 1; i < cells.length; i++) {
+            cells[i].innerHTML = Math.floor(Math.random() * 10);
+            cells[i].style.backgroundColor = getRandomColor();
+        }
+    }
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Generar números aleatorios al cargar la página
+    window.onload = function() {
+        generateRandomNumbers();
+    };
+</script>
+</body>
+</html>

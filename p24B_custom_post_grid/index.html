@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        img{width: 100%; display: block;}
+
+        .grid__container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .grid__item {
+           border: 1px solid black;
+           box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+        }
+
+        .grid__info{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .grid__image-container{
+            aspect-ratio: 3/4;
+        }
+
+        .grid__image{
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+        }
+
+    </style>
+
+    <div class="grid__container">
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/surf.jpg" alt="surf">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="grid__item">
+            <div class="grid__image-container">
+                <img class="grid__image" src="img/tigre.jpg" alt="tigre">
+            </div>
+
+            <div class="grid__info">
+                <h2 class="grid__title">titulo post</h2>
+                <p class="grid__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

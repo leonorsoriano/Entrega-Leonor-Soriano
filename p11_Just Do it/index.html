@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         *{padding: 0; margin: 0; box-sizing: border-box;}
+
+         header {
+            width: 100%;
+            background-color: rgb(220, 220, 220);
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+         img{
+            width: 100%;
+         }
+
+
+         .header-menuContainer, .header-menuContainer2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 0 30px;
+            }
+
+        .logos{
+                width: 30px;
+                display: flex;
+                align-items: center;
+        }
+
+
+         ul li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+
+        .header2 {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logoNike{
+            width: 60px;
+        }
+
+        .textos__header2{
+           font-size: 15px;
+        }
+
+        .header-menuContainer2{
+           display: flex;
+           justify-content: space-between;
+           padding-left: 200px;
+        }
+
+        .menu__busqueda{
+            display: flex;
+            align-items: center;
+        }
+
+        .icono{
+            width: 30px;
+            padding: 0px 5px;
+        }
+
+
+        .buscar{
+            padding: 0px 100px 0px 5px;
+            color: rgba(85, 84, 84, 0.413);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .devoluciones{
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            padding: 5px;
+            font-weight: 600;
+            display:block;
+            text-align: center;
+            background-color: rgb(220, 220, 220);
+            width: 100%;
+            padding: 10px;
+        }
+
+        .contenedorDevoluciones{
+            display: flex;
+            justify-content: center;
+        }
+
+        .Member{
+            font-size: 10px;
+            padding-top: 12px;
+        }
+
+        .rectanguloBuscar{
+            width: 180px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: rgb(220, 220, 220);
+            position: absolute;
+            z-index: -1;
+            top: 55px;
+            right: 80px;
+        }
+
+        .contenedorImagen{
+            text-align: center;
+            padding: 70px;
+            background-image: url(img/imagendefondo.jpg);
+            background-position: 5px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .PosibilidadesInfinitas{
+            font-weight: 800;
+            font-size: 12px;
+        }
+
+        .laMejor{
+            font-size: 40px;
+            font-weight: 800;
+            padding-bottom: 20px;
+        }
+
+        .accesoExclusivo{
+            padding-bottom: 30px;
+        }
+
+        .unete{
+            color: black;
+            font-weight: 800;
+            border-radius: 20px;
+            background-color: white;
+            padding: 5px 12px;
+            font-size: 10px;
+            
+           
+        }
+
+        .uneteContenedor{
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenedorFloor{
+            text-align: center;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .own{
+            font-size: 40px;
+            font-weight: 800;
+            padding: 10px;
+        }
+
+        .comprar{
+            color: black;
+            font-weight: 800;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            padding: 5px 12px;
+            font-size: 10px;
+            
+           
+        }
+
+        .comprarContenedor{
+            display: flex;
+            justify-content: center;
+        }
+
+        .mundo{
+            padding-bottom: 20px;
+        }
+
+        footer{
+            background-color: rgb(52, 49, 49);
+            padding: 25px;
+        }
+
+    </style>
+
+
+    <!--HEADER-->
+    <header>
+            <div class="logos"><img src="img/logo Jordan.png"><img src="img/Converse-logo.png"></div>
+
+            <nav class="header-menuContainer">
+                <ul>
+                  <li>Buscar una tienda</li>
+                  <li>|</li>
+                  <li>Ayuda</li>
+                  <li>|</li>
+                  <li>Únete a nosotros</li>
+                  <li>|</li>
+                  <li>Iniciar sesión</li>
+                </ul>
+            </nav>
+    </header>
+    <!--HEADER-->
+
+
+    <div class="header2">
+        <div class="logoNike"><img src="img/logo Nike.png"></div>
+        <nav class="header-menuContainer2">
+            <ul class="textos__header2"> 
+              <li>Novedades y destacados</li>
+              <li>Hombre</li>
+              <li>Mujer</li>
+              <li>Niño/a</li>
+              <li>Ofertas</li>
+            </ul>
+        </nav>
+        <div class="menu__busqueda">
+            <div class="icono icono__lupa"><img src="img/lupa.svg"></div>
+            <p class="buscar">Buscar</p>
+            <div class="rectanguloBuscar"></div>
+            <div class="icono icono__like"><img src="img/heart.svg"></div>
+            <div class="icono icono__tienda"><img src="img/shop.svg"></div>
+        </div>
+    </div>
+
+<div class="contenedorDevoluciones">
+    <div class="devoluciones">
+        <p>Devoluciones y entregas gratuitas</p>
+        <p class="Member">Como Member, tienes envíos gratuitos y devoluciones gratuitas en un plazo de 60 días. <u><b> Obtén más información y únete</u></b></p>
+    </div>
+</div>
+
+<div class="contenedorImagen">
+    <p class="PosibilidadesInfinitas">Posibilidades infinitas</p>
+    <p class="laMejor">LA MEJOR OFERTA DEL AÑO</p>
+    <p class="accesoExclusivo">Acceso exclusivo para Nike Members.</p>
+    <div class="uneteContenedor"><p class="unete">Únete a Nike</p></div>
+</div>
+
+<div class="contenedorFloor">
+    <p class="own">OWN THE FLOOR</p>
+    <p class="mundo">Muéstrale al mundo tu estilo con zapatillas icónicas y looks a la última.</p>
+    <div class="comprarContenedor"><p class="comprar">Comprar</p></div>
+</div>
+
+
+<footer></footer>
+
+    
+
+
+
+
+
+</body>
+</html>

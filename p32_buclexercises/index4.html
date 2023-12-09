@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const meses = [
+        "Enero", 
+        "Febrero", 
+        "Marzo", 
+        "Abril",
+        "Mayo", 
+        "Junio",
+        "Julio",
+        "Agosto", 
+        "Septiembre",
+        "Octubre",
+        "Noviembre", 
+        "Diciembre"
+      ];
+//FOR
+                for (let i = 0; i <meses.length; i++) { //poner 12 en el limite estaria mal, estaria hardcodeado, si aumenta el numero de meses o datos.
+                if(meses[i]=="Febrero") continue; //saltarse febrero
+                  console.log('xxxxxxxxxx',meses[i]);
+                }
+                console.log("-------------");
+//FOREACH
+                meses.forEach((element) =>{
+                  if (element=="Febrero") {return;}
+                  console.log(element);
+                })
+    </script>
+
+    
+    
+
+
+
+        <!--
+4. Crea un array con los meses del año. Recórrelo con un bucle que los pinte en la pantalla. Todos menos febrero
+
+-->
+</body>
+</html>

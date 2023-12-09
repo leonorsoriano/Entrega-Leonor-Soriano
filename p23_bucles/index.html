@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//FOR
+//se para en 5 con break, se salta uno con continue
+
+       // for (let i= 100; i>0; i--) { //bucle invertido
+        //for (let i= 0; i<10; i++) { //bucle original
+          
+            // += hace que no se eliminen las anteriores, las va concatenado
+            
+           /* 
+           if(i==5){ 
+                break;
+            } //se para en la 5
+            */
+
+
+           /* 
+           if(i==5){ 
+                continue;
+            } //se salta ese. tiene que ir antes de aquello que quiero saltar
+            */
+
+
+            //  console.log(i);
+            // document.body.innerHTML += "<p>generado por JS"+i+"</p>";
+
+       // }
+
+
+
+
+
+
+
+
+
+        //WHILE
+        //cuando no conozco el numero de iteracciones
+
+        //respuesta = "";
+
+       // var i=0;
+
+       /* while (respuesta != "x") { //siempre que la respuesta no sea x que funcione. ej: contraseña
+
+            respuesta = prompt("introduce una letra");
+
+            i++;
+
+            document.body.innerHTML += "letra correcta";
+    
+        }
+*/
+
+//DO WHILE la pregunta nace al final, asi que se ejecuta, si evalua en false si entra en el bucle, pero en while solo no entra en el bucle.
+//lo ejecuta al menos una vez.
+
+/*
+let i=0;
+do{
+ i=i+1;
+ console.log(i);
+} while (i<1)
+*/
+
+
+
+const bebidas = ["agua", "coca-cola","agua de panela","fanta","7up"];
+
+//bebidas.push("te de jazmín"); //añado otra mas siendo constante
+
+bebidas.forEach(bebidaItem =>{
+    console.log(bebidaItem);
+});
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

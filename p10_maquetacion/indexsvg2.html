@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style2.css">
+<script defer></script>
+    <title>Document</title>
+</head>
+
+
+<body>
+
+<div class="container">
+    <div class="rectangulos">
+        <div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">HOME</p>
+            </div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">sweet</p>
+            </div>
+        </div>
+        <div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">ABOUT</p>
+            </div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">me</p>
+            </div>
+        </div>
+    </div>
+    
+        <div class="circulo" ></div>
+        <div class="rectangulos">
+            <div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">LIFE</p>
+            </div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">good</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">CONTACT</p>
+            </div>
+            <div class="rectangulos_subcontainer">
+                <p class="rectangulos_shape">you</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //capturar
+    //const element = document.querySelector('')
+
+  //  const circle = document.querySelector{'#circulo'};
+  //  const rectangulos = document.querySelectorAll{'.rectangulos-shape'};
+
+        //console.log(rectangulos);
+       // console.log(circle);
+
+    //crear evento
+   // circle.addEventListener('click', ocultarcuadrados)
+
+    //funcion
+   // function ocultarcuadrados(){
+
+       // rectangulos.forEach(rectangulo => {
+        //        rectangulo.classList.toggle('ocultar');
+
+         //   });
+       // }
+
+       
+       const circle = document.querySelector('.circulo');
+        const rectangulos = document.querySelectorAll('.rectangulos_shape');
+
+        circle.addEventListener('click', ocultarcuadrados);
+
+        function ocultarcuadrados() {
+            rectangulos.forEach(rectangulo => {
+                rectangulo.style.display = 'none';
+            });
+        }
+    
+
+        
+
+</script>
+
+</body>
+</html>

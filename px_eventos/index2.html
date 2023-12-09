@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section3">
+        <div class="div2">
+            <button class="btn1">click me</button>
+        </div>
+    </section>
+
+    <script>
+        
+        const btn1 = document.querySelector('.btn1');
+        const div2 = document.querySelector('.div2');
+        const section3 = document.querySelector('.section3');
+
+        function btnLog(e) {
+            console.log('btn 1');
+            //e.stopPropagation(); corto bubbling
+        }
+
+        function divLog() {
+            console.log('div 2');
+        }
+
+        function sectionLog() {
+            console.log('section 3');
+        }
+
+        btn1.addEventListener('click', btnLog);
+        div2.addEventListener('click', divLog);
+        section3.addEventListener('click', sectionLog);
+
+
+</script>
+</body>
+</html>

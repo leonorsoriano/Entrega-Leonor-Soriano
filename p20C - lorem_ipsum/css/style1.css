@@ -1,0 +1,127 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+
+body{
+    width: 960px;
+    height: 1200px;
+
+}
+header{
+    background-color: black;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    letter-spacing: -2px;
+    transform: scaleY(1.8);
+}
+
+.container{
+    justify-content: center;
+    
+}
+
+.loremIpsum{
+    background-color: yellow;
+    height: 200px;
+    
+    font-size: 180px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+
+    overflow: hidden;
+
+    padding-top: 40px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-indent: -1em;
+    letter-spacing: 8px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.textos{
+    text-align: justify;
+    
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+td{
+    padding: 30px 15px 20px 15px;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    
+}
+
+
+
+.primeraLetraRoja:first-letter {
+    color: red;
+    font-weight: 800;
+ }
+
+  .textoNegrita{
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin: 0px 100px 0px 100px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+
+
+
+
+  .textoX{
+    display: flex;
+    align-content: center;
+    margin: 0px 200px 0px 200px;
+  }
+
+  .textoAlineadoDerecha{
+    text-align: right;
+    padding: 20px;
+    padding-top: 50px;
+    line-height: 2;
+  }
+
+
+  .xgrande{
+    font-size: 170px;
+    padding: 20px;
+  }
+
+  footer{
+    background-color: black;
+    height: 100px;
+    color: white;
+    font-size: 25px;
+    position: relative;
+
+  }
+
+  .texto__reflejo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    font-weight: bold;
+  }
+
+  .reflejo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px 30px;
+    font-weight: bold;
+        transform: scaleY(-1);
+        opacity: 0.5;
+  }

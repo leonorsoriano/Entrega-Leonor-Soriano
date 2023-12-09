@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const myObject = {
+            prop1: "super",
+            prop2: "cali",
+            prop3: "fragi",
+            prop4: "listicospialidoso",
+            prop5: "nuevo", //si añado sigue funcionado, por lo que es escalable
+            prop6: "nuevo2",
+
+            concatenar: function(){  //concatenar es propiedad
+                //return this.prop1 + this.prop2 + this.prop3 + this.prop4 //esta opcion es harcodeada por que si el objeto crece ya no funciona, ejemplo tengo un cliente nuevo.
+                
+                //opcion para no tener que coger uno a uno y si añado uno nuevo siga funcionando, no hardcodeado:
+                //leeme todas las propiedades del objeto y me las concatenas con object.values o object.keys.
+                let all ="";
+                Object.values(this).forEach((item)=>{ //lo recorro con forEach el array que he capturado con value.
+                    //all += item; //esto lo tengo que hacer solo para todas las propiedades menos para la ultima que es esta funcion de concatenar. para ello hago un if.
+                if(typeof item == "string") all += item;
+                })
+
+                return all;
+            }
+        };
+
+        console.log(myObject.concatenar()); //doble parentesis para que ejecute la funcion. Si no, te muestra el contenido de la propiedad.
+
+        //document.querySelector(".class")//metodo queryselector del objeto document
+
+        //5. Crea un objeto que tenga un método que permita concatenar los valores de todas sus propiedades (sin harcodear).
+    </script>
+</body>
+</html>

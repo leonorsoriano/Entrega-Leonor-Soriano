@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fotoSlot {
+            flex-basis: 90%;
+            background-image: url('img/morpheo.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .selectorFotos{ flex-basis: 10%; width: 100%;}
+
+        select{
+            width: 100%;
+            height: 100%;
+            background-color: darkslategray;
+            color: white;
+            font-weight: 800;
+        }
+    </style>
+
+ 
+
+
+
+<div class="container">
+    <div class="fotoSlot"></div>
+
+    <div class="selectorFotos">
+         <select id="matrix">
+            <option value="">Seleccionar personaje</option>
+            <option value="neo">Foto 1</option>
+            <option value="trinity">Foto 2</option>
+            <option value="morpheo">Foto 3</option>
+        </select>
+    </div>
+</div>
+
+
+
+
+<script>
+    /*
+
+    ALGORITMO:
+        Capturo el selector
+        Event listener  -> click
+            cambio la url de la foto
+
+    */
+
+    const photosUrls = {
+        neo: "neo.jpg",
+        trinity: "trinity.jpeg",
+        morpheo: "morpheo.webp",
+        }
+
+
+
+    const selectorPhotos = document.querySelector('#matrix');
+    const fotoSlot = document.querySelector('.fotoSlot');
+
+
+
+    selectorPhotos.addEventListener('input', function() {
+
+        fotoSlot.style.backgroundImage = `url("img/${photosUrls[selectorPhotos.value]}")`;
+
+    });
+</script>
+  
+  
+  
+
+
+</body>
+</html>

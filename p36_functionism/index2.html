@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>LANZAR MONEDA</button>
+    <div class="result"></div>
+
+    <script>
+        const button = document.querySelector('button');
+        const result = document.querySelector('.result');
+
+        button.addEventListener('click', lanzarmoneda)
+
+
+        var contador = 0; //defino la variable que esta a 0 en el primer click. IMPORTANTE: HAY QUE INICIALIZARLO FUERA DE LA FUNCION.
+        function lanzarmoneda(){
+           // const resultado = aqui iba lo que esta en return
+           // console.log(resultado);
+
+          
+           contador++;
+
+           if(contador > 3) { return result.innerHTML = "no tientes a tu suerte"}
+
+
+
+            return result.innerHTML = (Math.floor(Math.random()*2)%2) == "0" ? "cara" : "cruz" //Math.random()*2 da un numero entre 0 y 2 pero para quitar los decimales pongo math.floor. luego añado %2 para que me de los restos. Y si el numero random es igual a 0 es cara sino es cruz.
+
+
+
+
+            //2. Crea una función que cuando el usuario haga click en un botón simule el lanzamiento de una moneda al aire y devuelva cara o cruz en un div al lado del botón. Cuando el usuario haya hecho 3 lanzamientos, que la función se inactive y en el div se muetre " No tientes a tu suerte, amigo".
+
+        }
+
+
+        
+
+       
+
+    </script>
+</body>
+</html>

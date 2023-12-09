@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="static"> Esto es una fuente static</p>
+    <input class="static" type="range" name="" id="" oninput="changeStatic()" min="0" max="1000">
+    
+    <p class="variable"> Esto es una fuente variable</p>
+    <input class="variable" type="range" name="" id="" oninput="changeVariable()" min="0" max="1000">
+
+    
+
+    <script>
+        //static
+        const slider1 = document.querySelector('input.static')
+        const text1 = document.querySelector('p.static');
+
+        //variable
+        const slider2 = document.querySelector('input.variable')
+        const text2 = document.querySelector('p.variable')
+
+        function changeStatic(){
+            text1.style.fontWeight = slider1.value;
+            console.log(slider1.value)
+        }
+        function changeVariable(){
+            text2.style.fontWeight = slider2.value;
+            console.log(slider2.value)
+        }
+    </script>
+    
+</body>
+</html>

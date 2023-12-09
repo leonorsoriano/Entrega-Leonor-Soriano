@@ -1,0 +1,57 @@
+
+    *{padding: 0; margin: 0; box-sizing: border-box;}
+    
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+        background-color: #ffffa9;
+        padding: 10px;
+    }
+
+    .bloque-borde-morado{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #8615ef;
+        align-items:center;
+    }
+
+    .interior-izq{
+        display: flex;
+        padding-left: 5px;
+    }
+
+    .textos{
+        padding-left: 10px;
+    }
+
+
+    .circulito{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: blueviolet;
+    }
+
+
+    .cuadrado-negro{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .negrita{
+        font-weight: 800;
+    }
+
+    .pequeño{
+        font-size: 10px;
+    }
+
+
+    /*responsive
+    @media (max-width: 768px)
+    @media screen and { 
+        
+    }
+    */

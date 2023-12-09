@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container"></div>
+
+<script>
+    const container = document.querySelector('.container');
+    const notas = [
+         {
+            nota1: 'DO',
+            nota2: 'RE',
+            nota3: 'MI',
+            nota4: 'FA',
+            nota5: 'SOL',
+            nota6: 'LA',
+            nota6: 'SI',
+        }
+    ];
+
+    //1.crear instancia
+    const XHR = new XMLHttpRequest();
+
+    //2. Abrir y configurar
+    XHR.open('GET','notas');
+
+    //3. enviar 
+    XHR.send();
+
+    //4. Procesar respuesta
+    XHR.addEventListener('load',function(){
+        if(XHR.status==200){
+
+            const dataFromServer = JSON.parse(XHR.response); //parseo respuesta
+            
+            dataFromServer.forEach(notas => {
+                container.innerHTML += `<div>${notas}<div>`
+            }); // recorro array
+        }
+    })
+    
+</script>
+
+
+</body>
+</html>

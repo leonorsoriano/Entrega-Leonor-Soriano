@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //desde fuera de la funcion no puedo modificar la funcion.
+
+        //las funciones tienen dos partes, la declaracion donde defino la funcion y despues esta la llamada a la funcion.
+        //declaración
+        function sumarNumeros(num1, num2) {
+            const resultado = num1 +num2;
+            return resultado; //return es el valor que devuelve lo que pidas. si no lo pongo o no tiene valor no devuelve nada. tiene que ir al final de la funcion por que todo lo que pase detras de retun no afecta.
+        }   //se puede quitar const resultado y ponerlo directamente en return=num1 +num2.
+
+        //llamada. ahi es donde le paso los valores a las variables de los elementos. Osea num1 y num2 pasan a ser numeros concretos
+        sumarNumeros(4,5)
+
+        //podemos hacer un console log de sumar numeros
+        console.log(sumarNumeros(4,5));
+
+        //o podemos pintarlo en pantalla:
+        document.body.innerHTML += sumarNumeros(4,5);
+        document.body.innerHTML += sumarNumeros(2,8);
+        document.body.innerHTML += sumarNumeros(2,9);
+
+
+
+    </script>
+</body>
+</html>

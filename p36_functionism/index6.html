@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function createRainbowDivs(numDivs) {
+      const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      const divWidth = screenWidth / numDivs;
+            
+      for (let i = 0; i < numDivs; i++) {
+        const div = document.createElement('div');
+        div.style.width = divWidth + 'px';
+        div.style.height = screenHeight + 'px';
+        div.style.backgroundColor = rainbowColors[i % rainbowColors.length];
+        document.body.appendChild(div);
+      }
+    }
+    
+    createRainbowDivs(7);
+    
+//6. Crea un sistema de funciones que calcule el ancho y alto de la pantalla y cree N divs (por parámetro) que rellenen toda la pantalla y que cada uno de ellos tenga un color de fondo progresivo del arcoiris desde rojo a violeta.
+    </script>
+</body>
+</html>

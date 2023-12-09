@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const meses = [
+        "Enero", 
+        "Febrero", 
+        "Marzo", 
+        "Abril",
+        "Mayo", 
+        "Junio",
+        "Julio",
+        "Agosto", 
+        "Septiembre",
+        "Octubre",
+        "Noviembre", 
+        "Diciembre"
+      ];
+
+
+      const diasSemana = {
+        lunes: "L",
+        martes: "M",
+        miercoles: "X",
+        jueves: "J",
+        viernes: "V",
+        sabado: "S",
+        domingo: "D"
+      }
+
+      //creo un contenedor. innerhtml deja indroducir datos html
+      document.body.innerHTML ='<div class="container"></div>';
+
+      //lo capturo para tenerlo como objeto en JS con document.querySelector y lo meto en una variable que la llamo igual const
+      const container = document.querySelector('.container');
+
+      //aplico estilo grid al contenedor
+      container.style.display = "grid";
+      container.style.gridTemplateColumns = "repeat(4, 1fr)";
+      container.style.border = "1px solid #000";
+
+      //recorrer el array con forEach y en cada mes aplico una funcion (callback) mes es la funcion y le pongo el nombre que quiero.
+      meses.forEach((mes)=>{
+        //console.log(mes); //comprobamos en la consola que este bien
+
+
+
+
+        //pinto en la pantalla. Si pongo igual solo pinta uno asique pongo mas para concatenar y que los muestre todos sin borrarlos. Luego le doy estilo y pongo el titulo inyectando la variable de cada item con dolar mes, eso hace que las comillas simples fuera del div '' pasan a ser inclinadas ``  (por que uso un template literal con el dolar por que hace referencia a los meses que se muestran en la pantalla que llevan sus comillas ya "enero")
+        container.innerHTML += `<div class="mes-${mes}" style="padding:10px; border: 1px solid #000;"><h3>${mes}</h3></div>`
+
+        //capturamos mes, pero este coge solo el primero, asi que tenemos que hacer que cada mes capture uno diferente, tengo que hacer independiente la clase para cada elemento:
+
+        //tengo esto:
+        //const mesActual = document.querySelector('.mes');
+
+        //y lo cambio por esto:
+        const mesActual = document.querySelector('.mes-' + mes);
+
+        //y arriba modifico la clase del div: div class="mes-${mes}" que antes era <div class="mes"
+
+
+        //ahora vamos a maquetarlo bien: que capture el titulo de cada mes
+        const tituloMes = document.querySelector('.mes-' + mes +' h3');
+        tituloMes.style.gridColumn = "span 7";
+        //+' h3' hay que ponerle espacio antes de h3 por que sino busca otra clase
+
+
+
+        //estilos a mes
+        mesActual.style.display="grid";
+        mesActual.style.gridTemplateColumns = "repeat(7, 1fr)";
+
+
+
+         //creo dias de la semana L M X... antes de los 31 dias y creo otro array o un objeto, en este caso objeto diasSemana arriba.
+         //primero convierto el objeto en array. hay 3 metodos para hacerlo: IMPORTANTE
+        // Object.keys(diasSemana); //me da los keys
+        // Object.values(diasSemana); //me da los values
+        // Object.entries(diasSemana); //me da los keys y value
+
+       //console.log(Object.values(diasSemana));
+
+       //creo un div contenedor para los dias LMX...
+       mesActual.innerHTML += `<div class="dias-title-${mes}">`;
+        //lo capturo, el header de dias LMX...
+        const diasSemanaHeading = document.querySelector('.dias-title-' +mes);
+
+        //ajusto maquetacion
+        diasSemanaHeading.style.gridColumn = "span 7";
+        diasSemanaHeading.style.display = "grid";
+        diasSemanaHeading.style.gridTemplateColumns = "repeat(7, 1fr)";
+
+       //dentro de forEach ponemos un callback. pinto un loop dentro del contendor dias para LMX...
+       Object.values(diasSemana).forEach((dia)=>{
+        //console.log(dia)
+        diasSemanaHeading.innerHTML += `<p style="font-weight: 800">${dia}</p>`;
+
+       }) 
+
+
+
+
+
+
+
+
+
+        let dias=31;
+
+        //poner numero de dias correspondientes a cada mes
+        if(mes == "Febrero") dias = 29;
+        if(mes == "Abril"|| mes == "Junio"||mes == "Septiembre"||mes == "Noviembre") dias = 30;
+
+
+
+       
+
+        //creo un bucle de 31 iteraciones, uno para cada dia
+        for(let i = 1; i<=dias; i++){
+          mesActual.innerHTML += `<span style=padding:"5px">${i}</span>`
+        }
+
+      });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

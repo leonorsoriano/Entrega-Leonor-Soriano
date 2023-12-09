@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+
+        body{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            border: 1px solid #DDD;
+            padding: 20px;
+        }
+
+
+        label, input{
+            display: block;
+        }
+
+        label{
+            margin-top: 40px;
+        }
+
+        fieldset{
+            border: none;
+        }
+
+        textarea{
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+
+    <form action="form_receive.php" 
+    name="usuario_wp" 
+    enctype="application/x-www-form-urlencoded"
+    method="POST">
+
+
+    <!--Text-->
+    <label for="nameInput">Introduce tu nombre</label>
+    <input type="text" id="nameInput" name="user_name"
+    size="20" maxlength="9" required>
+
+    <label for="apellidosInput">Introduce tus apellidos</label>
+    <input type="text" id="apellidosInput" name="user_surname"
+    size="10">
+    <!--Text-->
+
+
+    <!--checkbox-->
+    <fieldset>
+    <label for="mindInput">Estoy en pleno uso de mis facultades mentales</label>
+    <input type="checkbox" name="user_minok" id="mindInput" checked>
+
+    <label for="age18Input">Soy mayor de edad</label>
+    <input type="checkbox" name="user_minok" id="age18Input">
+    </fieldset>
+    <!--checkbox-->
+
+
+
+    <!--radio buttons-->
+    <fieldset>
+    <legend>marca tu sexo</legend>
+    <label for="manInput">Hombre</label>
+    <input type="radio" name="user_sex" id="manInput">
+
+    <label for="womanInput">Mujer</label>
+    <input type="radio" name="user_sex" id="womanInput">
+
+    <label for="otherinput">Otro</label>
+    <input type="radio" name="user_sex" id="otherInput">
+    </fieldset>
+    <!--radio buttons-->
+
+
+
+    <!--text area-->
+    <label for="commentsInput">comenta aquí</label>
+    <textarea name="user_comments" id="commentsInput" placeholder="escribe tus comentarios aqui" cols="30" rows="10"></textarea>
+
+
+     <!--password-->
+     <label for="pwdinput"></label>
+     <input type="password" id="pwdinput">
+
+
+      <!--select-->
+      <label for="memberTypeInput">Selecciona el tipo de membresia</label>
+      <select name="user_level" id="memberTypeInput">
+        <option value="premium50">Premium</option>
+        <option value="standard5"select>Standard</option>
+        <option value="costringer1">Costringer</option>
+      </select>
+
+
+      <!--select con optgroups-->
+      <label for="carInput">Dime que coche tienes</label>
+      <select name="user_car" id="carInput" multiple>
+        <option value="">--selecciona--</option>
+        <optgroup label="coches suecos">
+            <option value="volvo">volvo</option>
+            <option value="saab">saab</option>
+
+        </optgroup>
+        <optgroup label="coches españoles">
+            <option value="seiscientos">seiscientos</option>
+            <option value="seat panda">seat panda</option>
+        </optgroup>
+
+
+      </select>
+      
+
+
+
+
+
+    <!--button si se puede poner fuera del formulario pero input no, y button admite imagenes o iconos. <button type="reset"></button> -->
+    <div style="margin-top: 40px;">
+    <input type="button" value="mostrar politica">
+    <input type="submit" value="enviar"> 
+    <input type="reset" value="resetear valores">
+    </div>
+
+
+
+
+    
+    
+
+
+
+
+    </form>
+</body>
+</html>

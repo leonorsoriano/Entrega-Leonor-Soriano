@@ -1,0 +1,174 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
+img{
+    width: 100%;
+}
+
+.flechas{
+    width: 70%;
+    mix-blend-mode: normal;
+}
+
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(255, 0, 119) 25%, rgb(193, 49, 116) 50%,  rgb(203, 108, 152) 50%, rgb(203, 174, 108) 75%, rgb(246, 211, 129) 75%, rgb(250, 216, 135) 100%, rgb(255, 210, 106) 100%); 
+
+}
+
+.headercontainer{
+    padding: 20px;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.header_right{
+    color: rgb(203, 101, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.header_left, .header_right{
+    flex-basis: 50%;
+}
+
+.header_title-bottom{
+    display: flex;
+}
+
+.header_heart-img{
+    width: 35px;
+}
+
+.header_title-top {
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+    font-family: fantasy;
+}
+
+.header_title-bottom{
+    color: palevioletred;
+    font-family: fantasy;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+}
+
+
+.container__body{
+    position: relative;
+}
+
+.container__body--shape2 {
+    position: relative;
+    bottom: 3px;
+}
+
+.container__body--shape3 {
+    position: relative;
+    bottom: 6px;
+}
+
+.container__body--shape4 {
+    position: relative;
+    bottom: 10px;
+}
+
+.container__body--shape5 {
+    position: relative;
+    bottom: 13px;
+}
+
+.cora1{
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 15%;
+}
+
+.cora2{
+    width: 65px;
+    position: absolute;
+    z-index: 1;
+    top: 34%;
+    left: 65%;
+}
+
+.cora3{
+    width: 65px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 10%;
+    transform: rotate(-30deg) scale(130%);
+}
+
+.cora4{
+    width: 65px;
+    position: absolute;
+    z-index: 1;
+    top: 70%;
+    left: 38%;
+    transform: rotate(-10deg);
+}
+
+.cora5{
+    width: 60px;
+    position: absolute;
+    z-index: 1;
+    bottom: -1%;
+    left: 70%;
+    transform: rotate(20deg) scale(130%);
+}
+
+.flechasNumero{
+    width: 110px;
+    position: absolute;
+    z-index: 1;
+    bottom: -3%;
+    left: -2%;
+
+}
+
+
+.container__body--shape{
+    border: 4px dashed blue;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(228, 244, 244);
+    
+}
+
+.text{
+    display:flex;
+    text-transform: uppercase;
+}
+
+.text__blue, .text__pink{
+    padding: 10px 20px 40px 10px;
+    width: 100%;
+
+}
+
+.text__blue{
+    color: rgb(40, 40, 255);
+}
+
+.text__pink{
+    color: rgb(255, 35, 79)
+}

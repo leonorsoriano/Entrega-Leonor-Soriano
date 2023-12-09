@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p{
+            font-size: 3rem;
+        }
+
+        .respuestas div{
+            margin-top: 20px;
+
+        }
+
+        button{
+            margin: 40px 0;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: violet;
+            color: white;
+        }
+
+
+    </style>
+
+    <p>¿cuantos elementos hay en la vida?</p>
+    <div class="respuestas">
+        <div>
+        <input type="radio" name="trivial" id="respuestaIncorrecta1">
+        <label for="respuesta1">hay 2 elementos</label>
+        </div>
+
+        <div>
+        <input type="radio" name="trivial" id="respuestaIncorrecta2">
+        <label for="respuesta2">hay 3 elementos</label>
+        </div>
+
+        <div>
+        <input type="radio" name="trivial" id="respuestaCorrecta">
+        <label for="respuesta3">hay 4 elementos</label>
+        </div>
+    </div>
+
+    <button>Enviar respuesta</button>
+    <div class="resultado">
+
+    </div>
+
+
+
+
+    <script>
+
+
+      
+    
+
+
+
+
+        
+        //1. usuario elige una opcion
+                //capturo radio buttons
+                const opcion = document.querySelectorAll('input[type="radio"]');
+                const correcta = document.querySelector('#respuestaCorrecta');
+                const resultSlot = document.querySelector('.resultado');
+
+
+
+        //2.usuario pulsa boton
+            //capturo boton enviar respuesta
+            const btnRespuesta = document.querySelector('button');
+             //evento click
+                 //extraigo valor del radio button elegido
+                 //if: si el valor es igual al que yo defino pinto ok 
+                 //else: sino pinto error
+
+                 btnRespuesta.addEventListener('click', function(){
+                  /*  if(opcionElegida.value = correcta) {
+                        resultSlot.innerHTML = "OK, es la respuesta";
+                    }
+                
+                    else {
+                        resultSlot.innerHTML = "ERROR, no es la respuesta";
+                   
+*/
+                
+                        if(opcion.value = correcta) {
+                            resultSlot.innerHTML = "OK, es la respuesta correcta";
+                         } else {
+                            resultSlot.innerHTML = "ERROR, no es la respuesta correcta";
+                        }
+
+                    } 
+                )
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

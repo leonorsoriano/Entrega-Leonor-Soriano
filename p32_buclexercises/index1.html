@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+   <script>
+        //crea 10 un párrafos automáticamente, cambiar color de fondo en cada iteración y fondo azul al párrafo 3:
+/*      for (let i= 0; i<10; i++){
+            if (i == 2) {
+            document.body.innerHTML += "<p style='border: 2px solid black; background-color: blue; color: white; padding: 20px;'>párrafo creado con un bucle for</p>";
+        } else {
+            document.body.innerHTML += "<p style='border: 2px solid black; background-color: #00" + i + "; color: white; padding: 20px;'>párrafo creado con un bucle for</p>";
+        }
+    }
+*/
+
+    for (let contador= 0; contador<10; contador++){
+         let color="#00"+ contador;
+         if(contador==2) color= "#f00";
+
+         document.body.innerHTML += "<p style='border: 2px solid black; background-color: " + color + "; color: white; padding: 20px;'>párrafo creado con un bucle for</p>";
+    }
+
+
+
+    </script>
+
+</body>
+
+
+<!--
+1. crea 10 párrafos automáticamente dentro de la etiqueta body con el texto: "párrafo creado con un bucle for".
+    - Ponle borde y margen vertical al párrafo para distinguirlo.
+    - Cambia un poco el color de fondo del párrafo cada iteración
+    - Pon el fondo azul al párrafo número 3.
+
+-->
+
+</html>
+
+
+

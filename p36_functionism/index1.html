@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function drawCircle(diameter){
+
+
+
+            document.body.innerHTML += `<div style= "height:${diameter}px; width:${diameter}px; background:red; border-radius: 50%"></div>`;
+        }
+
+        // drawCircle(200);
+
+        for (let index = 0; index < 80; index++) {
+            drawCircle(2*index);
+        }
+
+
+        
+//1. Crea una función que pinte una circunferencia en el centro de la pantalla del diámetro especificado por parámetro de la misma (en px).
+       
+
+    </script>
+</body>
+</html>

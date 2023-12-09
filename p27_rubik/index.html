@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 1800px;
+            perspective-origin: 50% -50%;
+        }
+
+        .cube{
+            perspective: 900px;
+            height: 200px;
+            width: 200px;
+            transform-style: preserve-3d;
+
+            display: flex;
+        }
+
+        .cube__side{
+            position: absolute;
+        }
+
+        .grid__container{
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            height: 100vh;
+        }
+
+        .grid__container--red{
+            transform: rotateY(-45deg);
+        }
+
+        .grid__container--blue{
+            transform: rotateY(45deg) translateZ(-105px) translateY(105px);
+        }
+
+
+        .grid__item{
+            border: 8px solid black;
+            width: 100px;
+        }
+
+        .grid__item--red{
+            background-color: red;
+        }
+
+        .grid__item--blue{
+            background-color: blue;
+        }
+
+        .grid__container--green {
+            background-color: green;
+            transform: rotateY(45deg) translateY(-800px);
+        }
+
+    
+
+
+    </style>
+
+
+    <div class="container">
+        <div class="cube">
+            <div class="cube__side cube__side--red"></div>
+            <div class="grid__container grid__container--red">
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+                <div class="grid__item grid__item--red"></div>
+            </div>
+
+
+            <div class="cube__side cube__side--blue"></div>
+            <div class="grid__container grid__container--blue">
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+                <div class="grid__item grid__item--blue"></div>
+            </div>
+
+
+            <div class="cube__side cube__side--green">
+                <div class="grid__container grid__container--green">
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                    <div class="grid__item grid__item--green"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+        </div>
+    </div>
+</body>
+</html>

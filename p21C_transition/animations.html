@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<body>
+    <style>
+
+        /*definicion*/
+        @keyframes coolanimation {
+            0%{
+               background-color: blue;
+                
+                
+            }
+
+
+           
+
+            100%{
+            left:calc(100% -180px);
+             left:100%;
+             background-color: green;
+             
+            }
+            
+            
+        }
+
+
+
+        /*llamada*/
+        .mydiv{
+            
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2rem;
+            padding: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            animation: coolanimation 2s infinite ease-in 2s;
+            animation-iteration-count: 4;
+            animation-fill-mode: both;
+            animation-direction: alternate-reverse;
+        }
+    </style>
+
+    <div class="mydiv">
+        X
+    </div>
+    
+</body>
+</html>

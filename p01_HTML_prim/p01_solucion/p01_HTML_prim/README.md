@@ -1,0 +1,43 @@
+# PRÁCTICA 1 - HTML Primer
+
+1. Crear fichero HTML.
+2. Añadir párrafo (etiqueta `<p></p>` + contenido dentro) a la página web.
+3. Añadir heading (etiqueta `<h1></h1>` + contenido dentro) a la página web.
+4. Dar color de fondo insertando el atributo `style="background: red"` dentro de la etiqueta `<p></p>`.
+5. Repetir el proceso con la etiqueta `<h1></h1>` cambiando el color de fondo.
+6. Añadir cabecera HTML.
+7. Trasladar el contenido a la etiqueta `<body></body>`
+
+
+
+### NOTAS
+ - Los ficheros HTML deben llevar la extensión .html
+ - Por convención el primer fichero de una web al que se accede al insertar la URL en el navegador es index.html
+ - En su interior el fichero HTML debe llevar la siguiente cabecera:
+
+    ```
+    <!DOCTYPE html>
+    <html>
+        <head>
+            [Los parámetros sobre como se debe comportar la web se incluyen aquí]
+        </head>
+        <body>
+            [El contenido real de la web se incluye aquí]
+        </body>
+    </html>
+    ```
+
+- La sintaxis genérica de elementos HTML con contenido es:
+
+    ```
+    <etiqueta  atributo1="[VALOR]" atributo2="[VALOR]" ...atributoN="[VALOR]">[CONTENIDO]</etiqueta>
+    ```
+- La sintaxis genérica de elementos HTML sin contenido es:
+
+    ```
+    <etiqueta  atributo1="[VALOR]" atributo2="[VALOR]">
+    ```
+
+### REFERENCIAS
+MDN Html básico - https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML
+

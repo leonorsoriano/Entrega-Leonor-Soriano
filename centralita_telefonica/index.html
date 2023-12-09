@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            background-color: crimson;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contenedor{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+        }
+
+        button{
+            display: block;
+            padding: 20px;
+            margin: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .botonIluminado {
+            background-color: yellow;
+        }
+
+        .recuadro__central--1, .recuadro__central--2{
+            width: 250px;
+            height: 300px;
+            background-color: blueviolet;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .recuadros__centrales{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+    </style>
+<div class="contenedor">
+    <div class="container">
+        <div class="compañeros__left">
+              <button class="compañero__btnleft--1">compañero 1</button>
+              <button class="compañero__btnleft--2">compañero 2</button>
+              <button class="compañero__btnleft--3">compañero 3</button>
+              <button class="compañero__btnleft--4">compañero 4</button>
+              <button class="compañero__btnleft--5">compañero 5</button>
+              <button class="compañero__btnleft--6">compañero 6</button>
+        </div>
+        <div class="recuadros__centrales">
+            <div class="recuadro__central--1"></div>
+            <div class="recuadro__central--2"></div>
+        </div>
+        <div class="compañeros__right">
+            <button class="compañero__btnright--1">compañero 1</button>
+            <button class="compañero__btnright--2">compañero 2</button>
+            <button class="compañero__btnright--3">compañero 3</button>
+            <button class="compañero__btnright--4">compañero 4</button>
+            <button class="compañero__btnright--5">compañero 5</button>
+            <button class="compañero__btnright--6">compañero 6</button>
+      </div>
+</div>
+<button class="btn__on--air">On Air</button>
+<button class="btn__terminar--llamada">Terminar llamada</button>
+
+    <script>
+
+    //IMAGENES:
+
+
+
+        //izquierda
+        const btnLeft1 = document.querySelector('.compañero__btnleft--1');
+        const btnLeft2 = document.querySelector('.compañero__btnleft--2');
+        const btnLeft3 = document.querySelector('.compañero__btnleft--3');
+        const btnLeft4 = document.querySelector('.compañero__btnleft--4');
+        const btnLeft5 = document.querySelector('.compañero__btnleft--5');
+        const btnLeft6 = document.querySelector('.compañero__btnleft--6');
+
+        const recuadroCentral1 = document.querySelector('.recuadro__central--1');
+
+        btnLeft1.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa1.jpg')";
+        });
+
+        btnLeft2.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa2.jpg')";
+        });
+
+        btnLeft3.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa3.jpg')";
+        });
+
+        btnLeft4.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa4.jpg')";
+        });
+
+        btnLeft5.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa5.jpg')";
+        });
+
+        btnLeft6.addEventListener('click', function() {
+        recuadroCentral1.style.backgroundImage = "url('img/compa6.jpg')";
+        });
+
+
+
+
+
+        //derecha
+        const btnRight1 = document.querySelector('.compañero__btnright--1');
+        const btnRight2 = document.querySelector('.compañero__btnright--2');
+        const btnRight3 = document.querySelector('.compañero__btnright--3');
+        const btnRight4 = document.querySelector('.compañero__btnright--4');
+        const btnRight5 = document.querySelector('.compañero__btnright--5');
+        const btnRight6 = document.querySelector('.compañero__btnright--6');
+
+        const recuadroCentral2 = document.querySelector('.recuadro__central--2');
+
+        btnRight1.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa1.jpg')";
+        });
+
+        btnRight2.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa2.jpg')";
+        });
+
+        btnRight3.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa3.jpg')";
+        });
+
+        btnRight4.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa4.jpg')";
+        });
+
+        btnRight5.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa5.jpg')";
+        });
+
+        btnRight6.addEventListener('click', function() {
+        recuadroCentral2.style.backgroundImage = "url('img/compa6.jpg')";
+        });
+
+
+
+
+
+
+    //ILUMINACIÓN:
+
+        //izquierda
+
+        btnLeft1.addEventListener('click', function() {
+            btnLeft1.classList.toggle('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+        });
+
+        btnLeft2.addEventListener('click', function() {
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.toggle('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+        });
+
+        btnLeft3.addEventListener('click', function() {
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.toggle('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+        });
+
+        btnLeft4.addEventListener('click', function() {
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.toggle('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+        });
+
+        btnLeft5.addEventListener('click', function() {
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.toggle('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+        });
+
+        btnLeft6.addEventListener('click', function() {
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.toggle('botonIluminado');
+        });
+
+
+
+
+
+
+
+
+        //derecha
+
+        btnRight1.addEventListener('click', function() {
+            btnRight1.classList.toggle('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+        });
+
+        btnRight2.addEventListener('click', function() {
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.toggle('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+        });
+
+        btnRight3.addEventListener('click', function() {
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.toggle('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+        });
+
+        btnRight4.addEventListener('click', function() {
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.toggle('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+        });
+
+        btnRight5.addEventListener('click', function() {
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.toggle('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+        });
+
+        btnRight6.addEventListener('click', function() {
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.toggle('botonIluminado');
+        });
+
+
+
+
+//función: Si hay dos personas conectadas entonces que se encienda en verde el boton OnAir
+
+        const btnOnAir = document.querySelector('.btn__on--air');
+        const btnLeft = document.querySelector('.compañeros__left');
+        const btnRight = document.querySelector('.compañeros__right');
+
+       btnLeft.addEventListener && btnRight.addEventListener ('click', function() {
+           btnOnAir.style.backgroundColor = 'green';
+       });
+
+//terminar llamada
+
+        const btnTerminarLlamada = document.querySelector('.btn__terminar--llamada');
+
+        btnTerminarLlamada.addEventListener('click', function() {
+
+            //apagar botones
+            btnLeft1.classList.remove('botonIluminado');
+            btnLeft2.classList.remove('botonIluminado');
+            btnLeft3.classList.remove('botonIluminado');
+            btnLeft4.classList.remove('botonIluminado');
+            btnLeft5.classList.remove('botonIluminado');
+            btnLeft6.classList.remove('botonIluminado');
+
+            btnRight1.classList.remove('botonIluminado');
+            btnRight2.classList.remove('botonIluminado');
+            btnRight3.classList.remove('botonIluminado');
+            btnRight4.classList.remove('botonIluminado');
+            btnRight5.classList.remove('botonIluminado');
+            btnRight6.classList.remove('botonIluminado');
+
+            btnOnAir.style.backgroundColor = '';
+
+            //quitar imagenes
+            recuadroCentral1.style.backgroundImage = "";
+            recuadroCentral2.style.backgroundImage = "";
+        });
+
+        
+
+
+    
+
+    </script>
+</div>
+</body>
+</html>

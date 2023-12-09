@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        body{
+            background-color: rgb(88, 179, 179);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        aside{
+            padding-left: 20px;
+        }
+
+        .random{
+            width: 20px;
+            height: 20px;
+        }
+
+        main{
+            padding: 0 20px;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        
+        .header{
+            padding: 20px;
+        }
+
+        .header__in{
+            background-color: white;
+            padding: 20px 10px;
+            border-radius: 8px;
+        }
+
+        .emotions{
+            display: flex;
+        }
+
+        .emotions__list ul, .emotions__message p{
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .emotions__list li{
+            border-bottom: 1px solid rgb(88, 179, 179);
+            text-align: center;
+        }
+
+        .emotions__list button{
+           
+            padding: 8px 60px;
+            position: relative;
+            top: 1px;
+        }
+
+
+        .emotions__message{
+            width: 100%;
+        }
+
+        .emotions__message p{
+            padding: 40px;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .random-button{
+            position: fixed;
+            width: 50px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 4px;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .random-button img{
+            position: relative;
+            top: 2px;
+            left: 1px;
+            width: 100%;
+        }
+
+
+
+        
+    </style>
+
+    <header class="header">
+        <h1 class="header__in">
+            Dev Emotions tool
+        </h1>
+    </header>
+
+    <div class="emotions">
+        <aside class="emotions__list">
+            <ul>
+                <li class="emotions__item">
+                    <button value="iluminacion">ILUMINACIÓN</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="paz">PAZ</button>
+                </li><li class="emotions__item">
+                    <button value="alegria">ALEGRÍA</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="amor">AMOR</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="razonamiento">RAZONAMIENTO</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="aceptacion">ACEPTACIÓN</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="voluntad">VOLUNTAD</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="neutralidad">NEUTRALIDAD</button>
+                </li>
+
+                <li class="emotions__item">
+                    <button value="coraje">CORAJE</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="orgullo">ORGULLO</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="ira">IRA</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="deseo">DESEO</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="miedo">MIEDO</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="tristeza">TRISTEZA</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="apatia">APATÍA</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="culpa">CULPA</button>
+                </li>
+                <li class="emotions__item">
+                    <button value="verguenza">VERGUENZA</button>
+                </li>
+            </ul>
+        </aside>
+        <main class="emotions__message">
+            <p id="resultado">Soy la dalai Lama de Javascript</p>
+            <p style="display: none;">Me da verguenzilla preguntar dudas</p>
+            <p style="display: none;">Tenía que haber hecho el código más limpio pero me pudo la pereza</p>
+            <p style="display: none;">Paso de programar hoy, es más, paso de pasar de programar...</p>
+            <p style="display: none;">No valgo para programar</p>
+            <p style="display: none;">Uuuuuuuuuuhhh!! Que viene Javascript!!</p>
+            <p style="display: none;">Amo css with all my soul</p>
+            <p style="display: none;">GRFTXFGRR!!! No me funciona!!!!</p>
+            <p style="display: none;">Mira que PEASO de web he hecho</p>
+            <p style="display: none;">No me sale ni una práctica pero VAMOS VAMOS!!, que rule JS!!!</p>
+            <p style="display: none;">Soy programadora y los programadores no tienen emociones</p>
+            <p style="display: none;">Si digo que acabo hoy el programa, lo acabo hoy.</p>
+            <p style="display: none;">Hoy me ha vencido del código, mañana será otro día.</p>
+            <p style="display: none;">Math.floor(x+34-y/array.lenght)... JAJA! FUUTT FUUUU! (cerebro chamuscado)</p>
+            <p style="display: none;">Me quiero tanto que en San Valentín reservo cena para 2 y voy sola</p>
+            <p style="display: none;">Ohhhh siii, es viernes!!!!!</p>
+            <p style="display: none;">He terminado el proyecto</p>
+            <p style="display: none;">En mi barrio me llaman la Dalai Lama de Javascript</p>
+
+
+        </main>
+    </div>
+
+    <button class="random-button">
+        <img class="random" src="img/random.svg" alt="randomsize" title="push to create random emotion">
+    </button>
+
+    <script>
+        const emotionsBtn=document.querySelectorAll('.emotions__item button');
+        console.log(emotionsBtn);
+
+        emotionsBtn.forEach((boton,index) =>{
+            const colorMutation=Math.floor(100 -(index*(280/emotionsBtn.length)));
+            const color="hsl("+colorMutation+",100%,50%)";
+            boton.style.color=color;
+
+          //  boton.addEventListener('click', mostrarMensaje);
+
+
+                        
+        });  
+
+
+
+
+        // Obtener los botones por su clase
+        var botones = document.getElementsByClassName("emotions__item");
+
+        // Recorrer los botones y asignarles el evento onclick
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].addEventListener("click", function() {
+             var valor = this.querySelector("button").value;
+            mostrarMensaje(valor);
+        });
+        }
+
+
+        // Función para mostrar el mensaje según el botón pulsado
+        function mostrarMensaje(emocion) {
+        var mensaje = "";
+
+
+    
+
+  // Asignar el mensaje según el valor del botón pulsado
+  switch (emocion) {
+    case "iluminacion":
+      mensaje = "En mi barrio me llaman la Dalai Lama de Javascript";
+      break;
+    case "paz":
+      mensaje = "He terminado el proyecto";
+      break;
+    case "alegria":
+      mensaje = "Ohhhh siii, es viernes!!!!!";
+      break;
+    case "amor":
+      mensaje = "Me quiero tanto que en San Valentín reservo cena para 2 y voy sola";
+      break;
+    case "razonamiento":
+      mensaje = "Math.floor(x+34-y/array.lenght)... JAJA! FUUTT FUUUU! (cerebro chamuscado)";
+      break;
+    case "aceptacion":
+      mensaje = "Hoy me ha vencido del código, mañana será otro día.";
+      break;
+    case "voluntad":
+      mensaje = "Si digo que acabo hoy el programa, lo acabo hoy.";
+      break;
+    case "neutralidad":
+      mensaje = "Soy programadora y los programadores no tienen emociones";
+      break;
+    case "coraje":
+      mensaje = "No me sale ni una práctica pero VAMOS VAMOS!!, que rule JS!!!";
+      break;
+    case "orgullo":
+      mensaje = "Mira que PEASO de web he hecho";
+      break;
+    case "ira":
+      mensaje = "GRFTXFGRR!!! No me funciona!!!!";
+      break;
+    case "deseo":
+      mensaje = "Amo css with all my soul";
+      break;
+    case "miedo":
+      mensaje = "Uuuuuuuuuuhhh!! Que viene Javascript!!";
+      break;
+    case "tristeza":
+      mensaje = "No valgo para programar";
+      break;
+    case "apatia":
+      mensaje = "Paso de programar hoy, es más, paso de pasar de programar...";
+      break;
+    case "culpa":
+      mensaje = "Tenía que haber hecho el código más limpio pero me pudo la pereza";
+      break;
+    case "verguenza":
+      mensaje = "Me da verguenzilla preguntar dudas";
+      break;
+    default:
+      mensaje = "No se ha seleccionado ninguna emoción.";
+      break;
+  }
+
+
+  // Mostrar el mensaje con el id "resultado"
+   var resultado = document.getElementById("resultado");
+   resultado.textContent = mensaje;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Capturar el botón de imagen aleatoria por su clase
+var randomButton = document.querySelector('.random-button');
+
+// Asignar el evento onclick al botón de imagen aleatoria
+randomButton.addEventListener('click', function() {
+  // Obtener todos los mensajes ocultos
+  var hiddenMessages = document.querySelectorAll('.emotions__message p[style="display: none;"]');
+  
+  // Obtener un mensaje aleatorio de los mensajes ocultos
+  var randomIndex = Math.floor(Math.random() * hiddenMessages.length);
+  var randomMessage = hiddenMessages[randomIndex].textContent;
+  
+  // Mostrar el mensaje aleatorio en el id "resultado"
+  var resultado = document.getElementById("resultado");
+  resultado.textContent = randomMessage;
+});
+
+
+
+        
+    </script>
+    
+</body>
+</html>

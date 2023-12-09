@@ -1,0 +1,77 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+
+
+@font-face {
+    font-family: "DangerNight";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fuente/HALLOWEEN DEMO Regular.eot");
+    src: url("../fuente/HALLOWEEN DEMO Regular.woff2") format("woff2"),
+    url("../fuente/HALLOWEEN DEMO Regular.woff") format("woff"),
+    url("../fuente/HALLOWEEN DEMO Regular.ttf") format("truetype"),
+    url("../fuente/HALLOWEEN DEMO Regular.otf") format("otf"),
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+
+    /*px, em, rem, %, keyword*/
+    font-size: 1.2em;
+    
+    /*grosor*/
+    font-weight: 400;
+
+
+     /*interlineado ritmo vertical importante*/
+     line-height: 1.5;
+
+     /*espaciado entre caracteres*/
+     letter-spacing: 1px;
+
+
+     /*cambiar de minuscula a mayouscula keyword*/
+     text-transform: uppercase;
+
+      /*alinear texto. necesita espacio en el contenedor*/
+      text-align: left;
+
+
+       /*decoración subrayado underline...*/
+       text-decoration: none;
+
+
+        /*color hexadecimal de 00 aFF, transparencia,rgb, hsl */
+        color: red;
+
+         /*cuando hay una palabra muy larga word-break: break-word; */
+
+        word-break: normal;
+
+
+
+        /*cuando no cabe la linea, cuando el texto colisiona con el contenedor, entonces se desborda 
+        white-space: nowrap; no salta de linea*/
+        white-space: pre-wrap; 
+         /*pre respeta los espacios del html pre respeta saltos de linea y espacios, pre-line solo espacios*/
+
+
+
+         
+
+
+}
+
+
+div{
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+     /*overflow controlar desbordamientos, con scroll en auto, scroll,hidden,auto,visible. tmb se puede elegir el eje: overflow-y
+     overflow: auto;
+     */
+    white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     /*poner puntos suspensivos*/
+      
+}

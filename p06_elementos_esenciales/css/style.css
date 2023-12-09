@@ -1,0 +1,14 @@
+h1{ border: 2px solid #000000; background: #EEE; padding: 5px; }
+
+
+
+.element
+{
+    background-color: rgb(200, 240, 100,10);
+    border: 5px solid rgb(220, 1, 194);
+    width: 50%;
+    margin: 20px auto 0 auto;
+}
+
+
+   

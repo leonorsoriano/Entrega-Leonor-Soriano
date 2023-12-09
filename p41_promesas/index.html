@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //objeto que representa el fracaso o no de una funcion js
+        
+        
+        //definicion o como se crea 
+        const promesaDeAmor = new Promise((resolve, reject)=>{
+            setTimeout(() => {
+                
+                const amor = true; //si es true siempre te querre sino no. 
+                if(amor){
+                    resolve("siempre te querré");
+                }else {
+                    reject("no te quiero");
+                }
+
+            }, 3000);  //3000 milisegundos, es decir 3 segundos
+        }) // pasarle una funcion pasada por parametro, osea un callback
+
+
+
+
+
+
+
+
+        //consumo o como se resuelve. igual que con fecht, usando then oara llmar a la promesa si se cumple, pero si no se cumple lamo a .catch
+        promesaDeAmor
+            .then((result)=>{
+                console.log(result);
+            })
+
+            .catch((nolove)=>{
+                console.log(nolove);
+            })
+
+            .finally(()=>
+                console.log('final de la promesa'))
+
+
+
+           
+
+            //la promesa permite asincronia
+
+
+        //estados
+    </script>
+</body>
+</html>

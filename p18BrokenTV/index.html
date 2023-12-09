@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/fun.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0; margin: 0; box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+        }
+        .tv{
+            padding: 20px;
+            border: 4px solid yellow;
+            display: inline-flex;
+            flex-direction: column;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .tv__Screen{
+            border: 4px solid yellow;
+            width: 800px;
+            height: 600px;
+            border-radius: 30px;
+            overflow: hidden;
+
+
+            animation: parpadeo 0.5s infinite;
+        }
+
+            @keyframes parpadeo {
+            0% { box-shadow: 0 0 20px white; }
+            50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 20px white; }
+            }
+           
+
+        .tv__image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+        .tv__buttons{
+            margin-top: 20px; 
+        }
+
+        .tv__button-item{
+            padding: 5px 10px;
+            background-color: rgb(232, 192, 60, 30);
+        }
+
+        .buttons{
+            cursor: pointer;
+        }
+
+
+
+
+
+        .tv__buttons-8 {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            gap: 5px;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        .tv__buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tv__Buttons-on-off{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        
+        .tv__btn-on{
+            width: 80px;
+            height: 40px;
+            background-color: pink;
+        }
+
+        .tv__btn-sint{
+            width: 60px;
+            height: 10px;
+        }
+
+        .tv__leg{
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background-color: yellow;
+            bottom: -34px;
+        }
+
+        .tv__leg--1{
+            left: 10%;
+        }
+
+        .tv__leg--2{
+            right: 10%;
+        }
+
+
+        .turn-off {
+            opacity: 0;
+        }
+
+
+        .tv__Screen.sint {
+            animation: none;
+        }
+
+
+    
+
+
+    </style>
+    
+
+
+
+    <div class="tv">
+        <div class="tv__Screen">
+            <img class="tv__image"
+            src="img/nemo.jpg" 
+            alt="nemo"
+            id="tvImg">
+        </div>
+        <div class="tv__buttons">
+            <div class="tv__buttons-8">
+                <button class="tv__button-item" id="btn1" data-number="0">1</button>
+                <button class="tv__button-item" id="btn2" data-number="1">2</button>
+                <button class="tv__button-item" id="btn3" data-number="2">3</button>
+                <button class="tv__button-item" id="btn4" data-number="3">4</button>
+                <button class="tv__button-item" id="btn5" data-number="4">5</button>
+                <button class="tv__button-item" id="btn6" data-number="5">6</button>
+                <button class="tv__button-item" id="btn7" data-number="6">7</button>
+                <button class="tv__button-item" id="btn8" data-number="7">8</button>
+            </div>
+        
+            <div class="tv__Buttons-on-off">
+                <button class="tv__btn-on"></button>
+                <p>ON/OFF</p>
+                <button class="tv__btn-sint"></button>
+                <p>SINT</p>
+            </div>
+        </div>
+        <div class="tv__leg tv__leg--1"></div>
+        <div class="tv__leg tv__leg--2"></div>
+    </div>
+
+
+
+ 
+
+
+
+
+
+</body>
+</html>

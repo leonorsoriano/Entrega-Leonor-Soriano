@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .game{
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedorImagen1, .contenedorImagen2{
+            width: 200px;
+            height: 300px;
+            background-color: orange;
+            border: 5px solid red;
+            
+        }
+
+        .fight{
+            padding: 10px;
+            border: 5px solid black;
+            background-color: white;
+            margin: 10px;
+            font-weight: 800;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .picollo, .vegeta, .goku{
+            display: none;
+        }
+
+    </style>
+    <div class="game">
+        <div class="contenedorImagen1"></div>
+        <button class="fight">Fight</button>
+        <div class="contenedorImagen2"></div>
+    </div>
+
+    <script>
+        const btnFight= document.querySelector('.fight');
+        const photoContainerL = document.querySelector('.contenedorImagen1')
+
+
+
+
+        const personajes = {
+            p0: {
+                name: 'goku',
+                force: '1'
+            },
+            p1: {
+                name: 'vejeta',
+                force: '2'
+            }, 
+            p2: {
+                name: 'picollo',
+                force: '3'
+            } ,
+        };
+
+
+    </script>
+</body>
+</html>

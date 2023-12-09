@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //HTTP Request
+        //1. creamos instancia de http request
+        const XHR = new XMLHttpRequest;
+
+        //2. configuramos y abrimos una conexión
+        XHR.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+
+        //3. envio la peticiión
+        XHR.send()
+
+        //4. Proceso la respuesta
+        XHR.addEventListener('load', function(){
+            if(XHR.status == 200){
+                const myJson = JSON.parse(XHR.response)
+                console.log(myJson);
+            }
+        })
+
+
+
+        //fetch
+        fetch('https://jsonplaceholder.typicode.com/posts'
+       
+        /*  ,{
+            method: 'GET', //recibir con get o enviar info con post encriptada y envio y recibo con post. put sustituye el recurso de destino, delete borra. get recuperar, post enviar, put sustituir y delete borrar.
+            headers: {
+                "Content-Type": "aplication/json"
+
+            }, //metadatos de mi peticion
+
+           mode: "cors/ same-origin/ no-cors", //modo determina si las peticiones pedidas a otro servidor son admitidas o no
+        
+           body: "enviar datos u objetos myObj...",
+
+           cache: "no cache/ force-cache/ reload"
+        
+        });
+        */
+        )
+        .then((response)=>{
+            response.json().then((data)=>{
+                console.log(data);
+            })
+        })
+
+    </script>
+</body>
+</html>

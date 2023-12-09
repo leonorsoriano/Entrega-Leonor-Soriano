@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            height: 100vh;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        } .transformers{
+            width: 400px;
+            height: 400px;
+            font-size: 4rem;
+            color: white;
+            background-color: blue;
+        }
+
+        .transform-type{
+            /*transform: nombre(valor) nombre(valor)...
+            
+            ROTATE
+            transform: rotateY(0.5turn);
+            transform: rotateX(3.5rad);
+            transform: rotate(45deg);
+            transform: rotate(0.5turn);
+            transform: rotateX(3.5rad) rotateY(20deg);*/
+
+            /*
+            SKEY
+            transform: skew(9deg, 9deg);
+            transform: skewX(9deg) skewY(9deg);
+            transform: skew(90deg); con 90 desaparece*/
+
+
+            /*TRANSLATE
+            transform: translate();
+            desplaza en el eje x o en el y.
+
+            El elemento sigue ocupando el espacio original sin transformacion.
+
+            transform: translate(300px, -40px);
+            transform: translateX(200px) translateY(200px);
+            */
+
+            transform: translate(300px, -400px);
+
+
+            /*ESCALE*/
+            transform: scale(0.5);
+            transform: scale(0.5,3);
+            transform: scaleX(4) scaleY(1.3);
+
+            transform: matrix();
+
+        }
+
+    </style>
+    <div class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore eum quis sed dolores fuga repudiandae similique natus soluta dicta. Veritatis repellendus nemo vitae corporis aliquid nostrum illo minima! Blanditiis, dicta.</p>
+        <div class="transformers transform-type">
+            OPTIMUS PRIME
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quisquam ipsa, debitis, et, nobis nam nemo aut quidem molestias veritatis architecto quis optio! Est, sed delectus obcaecati id cum voluptatibus.</p>
+    </div>
+</body>
+</html>

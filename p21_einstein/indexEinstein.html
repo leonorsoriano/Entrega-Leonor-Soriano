@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         *{padding: 0; margin: 0; box-sizing: border-box;}
+
+.einstein{
+    
+    background-image: url("img/einstein.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: rgb(2, 32, 32);
+    padding: 4em 6em;
+
+    display: flex;
+    
+    align-items: flex-end;
+}
+
+.einstein__txt{
+    background-color: rgb(191, 235, 235);
+    font-size: 1.9rem;
+    padding: 1em 1.4em;
+    width: 70%;
+    transform: skew(-10deg);
+    
+}
+
+@media screen and (max-width: 600px){
+
+    html {
+        font-size: 80%;
+    }
+    /*html esto es responsive*/
+
+    .einstein{
+        padding: 0;
+    }
+
+    .einstein__txt{
+        width: 100%;
+        transform: none;
+    }
+}
+
+
+
+
+    </style>
+    
+ <div class="einstein">
+    <p class="einstein__txt">La imaginación es más importante que el conocimiento
+    </p>
+ </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+
+        .backImage{
+            height: 500px;
+             /*no ponerlo en porcentaje a no ser que el contenedor si tenga altura*/
+
+            background-color: #AA333399;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(0,0,0,1),
+                rgb(0,0,0,0)
+            ),
+            url(https://picsum.photos/400/300);
+           
+            
+            background-repeat: no-repeat;
+            /*
+            background-repeat: repeat;
+            background-repeat: space;
+            background-repeat: round;*/
+
+            padding: 50px;
+            border: 20px dashed black;
+            /*Hacer un marco de lineas*/
+
+
+            background-size: cover;
+            /* 
+            cover: La imagen siempre cubre el contenedor
+            contain: La imagen ocupa siempre el 100% de ancho del contenedor
+            50% 200px
+            porcentaje, px, em, rem
+            usar cover siempre y combinarla con background position*/
+
+
+
+            background-position: bottom  left 30%;
+            /* decidir hacia donde recorta. bottom pone el eje abajo
+            admite bottom top right left o valores numericos. la primera es vertical y la segunda horizontal*/
+
+
+
+            background-origin: border-box;
+            /* cambiar el comportamiento del modelo de caja
+            puede ser padding-box donde la imagen empieza donde termina el borde. Puede ser border-box, que la imagen empieza debajo del borde. Y content box hace que la foto empiece dentro del padding*/
+
+
+
+            
+
+        }
+    </style>
+
+    <div class="backImage">
+
+    </div>
+</body>
+</html>

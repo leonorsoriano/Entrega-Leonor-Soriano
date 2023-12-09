@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <script>
+       
+
+        function nombreEnMayusculas(nombre) {
+          return nombre.toUpperCase();
+        }
+
+        function apellidosEnMayusculas(apellidos) {
+          return apellidos.toUpperCase();
+        }
+
+        function saludo(nombre, apellidos) {
+          const nombreEnMayus = nombreEnMayusculas(nombre);
+          const apellidosEnMayus = apellidosEnMayusculas(apellidos);
+          const saludoCompleto = `Hola, ${nombreEnMayus} ${apellidosEnMayus}!`;
+          document.body.innerHTML = saludoCompleto;
+        }
+
+        saludo("Leonor", "Soriano");
+
+
+
+
+
+
+
+
+/*3. Crea 3 funciones:
+    - Nombre: que reciba un nombre lo ponga en mayúsculas y devuelva el resultado;
+    - Apellidos: que reciba los apellidos los ponga en mayúsculas y devuelva el resultado;
+    - Saludo: que llame a las otras dos y les pase por parámetro nombre y apellidos al llamarlas
+    - Que la función pinte el saludo en el body automáticamente al inicializar la web*/
+
+
+    </script>
+</body>
+</html>

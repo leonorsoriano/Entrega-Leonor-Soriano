@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //delay
+        console.log('antes del delay');
+
+        setTimeout(() => {
+            console.log('me retraso JS');
+        }, 3000);
+
+        console.log('despues del delay');
+
+
+
+
+        //loop temporal
+        const intervalo = setInterval(() => {
+                                 document.body.innerHTML += '<p> elemento creado con un loop</p>'
+                        }, 500);
+
+        clearInterval(intervalo);
+    </script>
+</body>
+</html>

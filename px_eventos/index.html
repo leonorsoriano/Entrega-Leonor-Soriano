@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">click me</button>
+    <script>
+        //eventos: mouse, windowl
+        //element.addEventListener('tipo de evento', listener, options);
+
+        const btn1 = document.querySelector('.btn1');
+
+        //defino la funcion //hosting reorganiza las funciones que estan abajo.
+        //counter = 0;
+        function logMessage() {
+           // counter ++;
+           // if(counter==3) btn1.removeEventListener('click', logMessage);
+            console.log('lanzando evento!!');
+        }
+
+        //le paso el callback: el nombre de la funcion pasado por parametro y va sin parentesis por que si no no espera a que haga click
+        btn1.addEventListener('click', logMessage, {
+            once: true,
+            capture: true,
+        });
+    
+</script>
+</body>
+</html>

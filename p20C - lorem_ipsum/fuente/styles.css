@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'HALLOWEEN DEMO Regular';
+  src: url(./HALLOWEEN+DEMO+Regular.eot);
+  src: url(./HALLOWEEN+DEMO+Regular.eot?#iefix) format('embedded-opentype'),
+       url(./HALLOWEEN+DEMO+Regular.otf) format('otf'),
+       url(./HALLOWEEN+DEMO+Regular.svg#HALLOWEEN%20DEMO%20Regular) format('svg'),
+       url(./HALLOWEEN+DEMO+Regular.ttf) format('truetype'),
+       url(./HALLOWEEN+DEMO+Regular.woff) format('woff'),
+       url(./HALLOWEEN+DEMO+Regular.woff2) format('woff2');
+}

@@ -1,0 +1,33 @@
+[{
+    "key1" : "string",
+    "key2" : 4,
+    "key3" : true,
+    "key4" : null,
+    "key5" : [
+        1, "manoli",
+        {
+            "tr" : "hola"
+        }
+    ],
+    "key6" :  {
+        "nombre":"leonor",
+        "apellido":"soriano"
+    }
+},
+
+{
+    "key1" : "string",
+    "key2" : 4,
+    "key3" : true,
+    "key4" : null,
+    "key5" : [
+        1, "manoli",
+        {
+            "tr" : "hola"
+        }
+    ],
+    "key6" :  {
+        "nombre":"leonor",
+        "apellido":"soriano"
+    }
+}]

@@ -1,0 +1,103 @@
+/*Primera letra de todo el texto, roja*/
+h1::first-letter {
+
+    color: red;
+    
+    }
+
+
+
+.parrafo-alternativo{
+    color: blueviolet;
+}
+
+#spanElement{
+    background-color: hsl(240, 100%, 50%, 50%);
+}
+
+/*selector por atributo: */
+[title="elemento Discolo Rojo"]{
+    color: rgb(255, 0, 0, 0);
+}
+
+/*rosa a lo hijos de section 1: */
+.setction-1{
+    color: pink;
+}
+
+
+/*Primer p de 'section-3' rojo, segundo, verde, tercero azul*/
+.section-3 p{
+    font-size: 24px;
+}
+.section-3 p:first-child{
+    color: red;
+    
+}
+
+.section-3 p:nth-child(n+3){
+    color: green;
+}
+
+.section-3 p:last-child{
+    color: blue;
+}
+
+
+ /*todos los elementos p menos el primero:*/
+
+ .section-2 > p{
+    font-size: 21px;
+
+ }
+
+
+
+ /*rosa a textos al pasar el raton por encima: */
+ p:hover {
+    color: pink;
+    
+ }
+
+ p:not(.parrafo-alternativo){
+    border: 3px solid black;
+ }
+
+
+
+
+
+ /*before y after */
+ .section-3::before{
+    content: "hola soy un before y me pongo antes del contenido section3";
+ }
+
+ .section-3::after{
+    content: "hola soy un after y me pongo despues del contenido section3";
+ }
+
+
+
+ /*fondo rosa*/
+ .parrafo-alternativo{
+    background-color: pink;
+ }
+
+
+ .parrafo-alternativo-con-background{
+    background-color: pink;
+ }
+
+
+ /*amarillo el primer parrafo de section 2:*/
+
+ .section-2 div p{
+    color: yellow;
+ }
+
+
+
+ 
+
+ 
+

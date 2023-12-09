@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="dom-item">Soy un elemento DOM solitario</p>
+
+    <button class="copiar">Copiar</button>
+    <button class="borrar">Borrar</button>
+    <button class="insertar-texto">Insertar Texto</button>
+    
+
+    <script>
+        //capturo botones y parrafo
+        const copiar = document.querySelector('.copiar');
+        const borrar = document.querySelector('.borrar');
+        const insertarTexto = document.querySelector('.insertar-texto');
+        
+        const domItem = document.querySelector('.dom-item');
+
+
+
+        //al hacer click en copiar que llame a copiar, en borrar a borrar y en insertar texto a insertar texto.
+        copiar.addEventListener('click', function() {
+            domManipulator(domItem, "copiar");
+        });
+
+        borrar.addEventListener('click', function() {
+            domManipulator(domItem, "borrar");
+        });
+
+        insertarTexto.addEventListener('click', function() {
+            domManipulator(domItem, "insertar texto");
+        });
+
+       
+
+       
+        
+        //lo que significa copiar, borrar e insertar texto
+        function domManipulator(obj, action) {
+
+            if(action =="copiar"){
+                //clonar objeto
+              document.body.innerHTML += `<p>Soy un elemento DOM solitario</p>`;
+
+
+            } 
+            else if(action =="borrar"){
+                //borrar objeto
+                obj.remove();
+
+            }
+
+            else if(action =="insertar texto"){
+                //insertar texto dentro del objeto
+                obj.textContent = "Texto insertado";
+            
+            }
+
+            else{
+                console.log("esa accion no esta definida");
+            }
+            
+        }
+
+        
+        
+
+
+
+       
+
+
+
+
+
+
+
+
+/*4. Crea una función que dado un elemento dom permita: 
+    - borrarlo
+    - copiarlo debajo
+    - insertar un texto dentro del elemento
+
+    - dependiendo de los parámetros que se le pasen función. 
+        - Ejemplo: domManipulator(obj, borrar) -> borra
+        - Ejemplo: domManipulator(obj, copiar) -> copia
+
+    - Crea botones HTML que lancen la función
+    */
+
+    </script>
+</body>
+</html>

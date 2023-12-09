@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+
+        body{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            border: 1px solid #DDD;
+            padding: 20px;
+        }
+
+
+        label, input{
+            display: block;
+        }
+
+        label{
+            margin-top: 40px;
+    
+        }
+
+        fieldset{
+            border: none;
+            
+        }
+
+        legend{
+            padding-top: 4rem;
+        }
+
+        
+
+       
+    </style>
+
+
+    <form action="formreception.php" 
+    name="usuario_wp" 
+    enctype="application/x-www-form-urlencoded"
+    method="POST">
+
+    <label for="nameInput">Introduce tu nombre y apellidos</label>
+    <input type="text" id="nameInput" name="user_name"
+    size="20">
+
+
+     <!--checkbox-->
+     <fieldset>
+        <label for="corazonInput">Sin problemas de corazón</label>
+        <input type="checkbox" name="user_minok" id="corazonInput" checked>
+    
+        <label for="age18Input">Mayor de 18</label>
+        <input type="checkbox" name="user_minok" id="age18Input" checked>
+
+        <label for="facultadesInput">En pleno uso de mis facultades mentales</label>
+        <input type="checkbox" name="user_minok" id="facultadesInput" checked>
+        </fieldset>
+        <!--checkbox-->
+
+
+
+         <!--radio buttons-->
+    <fieldset>
+        <legend>Sexo</legend>
+        <label for="manInput">Hombre</label>
+        <input type="radio" name="user_sex" id="manInput">
+    
+        <label for="womanInput">Mujer</label>
+        <input type="radio" name="user_sex" id="womanInput">
+    
+        <label for="otherinput">Otro</label>
+        <input type="radio" name="user_sex" id="otherInput">
+        </fieldset>
+        <!--radio buttons-->
+
+
+
+         <!--select-->
+      <label for="deporteInput">Elige tu deporte</label>
+      <select name="user_level" id="deporteeInput">
+        <option value="Crossfit">Crossfit</option>
+        <option value="Spinning">Spinning</option>
+        <option value="Kung fu">Kung fu</option>
+      </select>
+
+
+
+       <!--text area-->
+    <label for="commentsInput">comentarios</label>
+    <textarea name="user_comments" id="commentsInput" placeholder="Escribe tus comentarios aqui" cols="30" rows="10"></textarea>
+
+
+    <input type="submit" value="enviar"> 
+
+
+    <!--password-->
+    <label for="pwdinput"></label>
+    <div class="password-container">
+        <input type="password" id="pwdinput">
+     <i class="toggle-password fas fa-eye"></i>
+    </div>
+
+    </form>
+    
+
+
+    <script>
+        const passwordInput = document.getElementById('pwdinput');
+        const togglePassword = document.querySelector('.toggle-password');
+    
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePassword.classList.toggle('fa-eye-slash');
+        });
+    </script>
+
+
+
+
+</body>
+</html>

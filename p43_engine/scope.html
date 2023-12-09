@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //SCOPE GLOBAL
+        const mivar = "hola soy un var";
+
+        const logName = function(){
+            //const mivarLocal = "hola estoy aislada";
+            //SCOPE LOCAL: desde scope global no puedo acceder al local, desde el local si puedo acceder al global.
+            //console.log(mivar);
+
+            if(true){
+                let varLet = "hola soy un let";
+                var varVar = "hola soy un var"
+                const varConst = "hola soy un const"
+            }
+        }
+
+        logName();
+        //console.log(mivarLocal); //scope global. da error de referencia por que esta la variable dentro del local
+    </script>
+</body>
+</html>

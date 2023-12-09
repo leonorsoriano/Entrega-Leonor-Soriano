@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .grid__container{
+            display: grid;
+            grid-template-areas:
+                "cabecera cabecera cabecera cabecera"
+                "lateral principal principal principal"
+                "pie pie pie pie";
+        }
+
+        header{
+            background-color: pink; 
+            padding: 50px;   
+            grid-area: cabecera;      
+        }
+
+        aside{
+            background-color: rgb(255, 255, 123);
+            padding: 50px;
+            grid-area: lateral; 
+        }
+
+        main{
+            background-color: rgb(56, 142, 255);
+            padding: 50px;
+            grid-area: principal; 
+        }
+
+        footer{
+            background-color: pink;
+            padding: 50px;   
+            grid-area: pie;   
+        }
+
+    </style>
+    <div class="grid__container">
+        <header>HEADER</header>
+        <aside>ASIDE</aside>
+        <main>MAIN</main>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+</html>

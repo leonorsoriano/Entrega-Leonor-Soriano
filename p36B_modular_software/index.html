@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .padd-40{
+            padding: 40px;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+
+        .border-2{
+            border: 2px solid black;
+        }
+
+        .display{
+            display: none;
+        }
+
+    </style>
+<div>
+    <img src="https://picsum.photos/200/300" alt="foto random" title="foto aleatoria">
+</div>
+<input value="3" type="text">
+<button class="btn1">click me</button>
+
+<script>
+    /*2. Crea una función que reciba un objeto por parámetro y realice las siguientes acciones:
+    - Añadir padding:40px al div
+    - Añadir background rojo al div
+    - Añadir borde 2px solid black al div
+    - Cambiar el atributo 'title' de la imagen por "foto random" 
+    - Definir display: none para la imagen*/
+
+
+    //capturo objeto dom
+    const btn1= document.querySelector('.btn1');
+    const capturedObj = document.querySelector('div');
+    const imgCapt = document.querySelector('[alt="foto random"]');
+    const inputText= document.querySelector('input');
+    console.log(imgCapt);
+
+    //defino funciones
+    function divChanger(obj){
+        obj.classList.add('padd-40');
+        obj.classList.add('bg-red');
+        obj.classList.add('border-2');
+        obj.classList.add('display');
+
+    }
+
+    //lanzo envento y llamo a la funcion
+    btn1.addEventListener('click', function(){
+        divChanger(capturedObj);
+        //divChanger(btn1); esto se aplica al boton
+        //imgCapt.setAttribute('title', 'title cambiado por JS');
+        //const altvalue = imgCapt.getAttribute('alt');
+        //console.log(altvalue)
+        //imgCapt.removeAttribute('alt'); // con esto se quitan atributos
+       
+        
+        //imgCapt.setAttribute('src','http...'); //valor por defecto
+        //imgCapt.src = 'http...'; //valor dinamico, cuando responde a interaccion del usuario, input.
+    
+        console.log(inputText.getAttribute('value')); // muestra el valor original.
+        console.log(inputText.value);//muestra el introducido por el ususario. en input. valor real.
+
+    })
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        for (let i = 1; i <= 100; i++) {
+            const button = document.createElement("button");
+            button.innerHTML = i;
+            button.addEventListener("click", function() {
+              console.log("Hice click en el número " + i + "!");
+            });
+            document.body.appendChild(button); //acceso al dom, hay que minimizarlos
+        }
+    </script>
+    
+
+
+
+    <!--
+2. Crea 100 botones con un número dentro del 1 al 100 que cuando hagas click en ellos lancen el mensaje en consola: hice click en el número [x]!
+
+-->
+</body>
+</html>

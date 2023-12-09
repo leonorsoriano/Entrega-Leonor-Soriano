@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body{
+            height: 100vh;
+        }
+
+        
+        .mydiv{
+            background-color: blueviolet;
+            padding: 30px;
+            border: 2px solid black;
+            cursor: pointer;
+            color: white;
+            transition: all 4s ease-in-out;
+        }
+
+
+        .mydiv:hover{
+            background-color: coral;
+            color: black;
+            transition: all 4s ease-in-out;
+            
+            
+            /*transition-timing-function: steps(4 jump-both);
+            transition-property: color;
+            transition-delay: 2s;*/
+        }
+
+    </style>
+
+    <div class="mydiv">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur provident inventore id ducimus? Vel dolores libero quod placeat nam, asperiores consequatur quos sit iste error perferendis minima cupiditate quisquam!
+    </div>
+
+
+    <script>
+        document.body.addEventListener('click', function(){
+
+        const mydiv=document.querySelector('.mydiv');mydiv.classList.add('active');
+    })
+    </script>
+</body>
+</html>

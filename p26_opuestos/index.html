@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .container{
+            height: 100vh;   
+        }
+
+        .container__mobile{
+            display: none;
+        }
+
+
+        .textos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .textos__mobile{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .yo{
+            height: 100vh;
+            width: 100vh;
+            color: white;
+            background-color: black;
+        }
+
+        .tu{
+            height: 100vh;
+            width: 100vh;
+            color: black;
+            background-color: white;
+        }
+
+        .textos__mobile--arriba{
+            font-size: 5rem;
+            height: 100vh;
+            
+            color: rgb(5, 72, 189);
+            font-weight: 800;
+            font-style: italic;
+
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .textos__mobile--abajo{
+            font-size: 2.8rem;
+            
+            background-color:  rgb(7, 90, 234);
+            color: white;
+
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+
+            line-height: 1.2;
+        }
+
+        p{
+            padding: 31%;
+        }
+
+
+        @media screen and (max-width: 960px){   
+            .container{
+            display: none;
+             }
+
+            .container__mobile{
+            display: block;
+             }
+
+        }
+
+
+
+    </style>
+
+
+
+    <div class="container">
+        <div class="textos">
+            <div class="textos yo">yo</div>
+            <div class="textos tu">tú</div>
+        </div>
+    </div>
+
+    <div class="container__mobile">
+        <div class="textos__mobile">
+            <div class="textos__mobile textos__mobile--arriba">SOLIDARIDAD</div>
+            <div class="textos__mobile textos__mobile--abajo"><p>La solidaridad <br>contruye un <br>mundo sin <br>ego,<br>mejor,<br> más humano <br>y más digno</p></div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

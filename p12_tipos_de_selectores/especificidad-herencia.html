@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            font-size: 40px;
+        }
+/*
+        #link-id {
+            color: #ff0000ff;
+        }
+
+        .div_abuelo a{
+            color: #00ff00;
+        }
+*/
+
+        .div_abuelo a{
+                    color: aqua;
+                }
+
+
+                .div_abuelo .p_padre a.link-class{
+                    color: aqua; 
+                }
+
+
+        .p_padre a{
+            color: #ff00bb;
+        }
+
+        
+
+
+
+
+    </style>
+
+    <div class="p_abuelo">
+        <p class="p_padre">
+            <a 
+            style="color: yellow;"
+            href="https://www.music-map.com/" 
+            id="link-id" 
+            class="link-class" 
+            data-Leo="hola">Este es mi link
+            </a>
+        </p>
+    </div>
+</body>
+</html>

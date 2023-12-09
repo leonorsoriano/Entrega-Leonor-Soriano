@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="class-1" id="genericId">hola</div>
+    <script>
+        //Captura de elementos
+
+        //1. ID
+        const idCapturado= document.getElementById('genericId'); //captura id pero no se pone #, a diferencia de quertySelector que si hay que ponerlo por que es generica.
+
+
+        //2. classname
+        const elementClass = document.getElementsByClassName('class-1'); //captura un grupo de elementos, no es iterable.
+
+        //3.tagname
+        document.getElementsByTagName('div p span');
+
+        //4. queryselector
+
+        //5. queryselectorAll
+
+        //GESTION DE CLASES
+        const elementoCapturado = document.querySelector('#genericId2');
+
+        //add, remove, contains y toggle
+       // elementoCapturado.classList.add('active');
+       elementoCapturado.addEventListener('click', function(){
+        elementoCapturado.classList.add('active');
+       })
+
+       elementoCapturado.classList.add('active');
+       elementoCapturado.classList.remove('active');
+
+    </script>
+    
+</body>
+</html>

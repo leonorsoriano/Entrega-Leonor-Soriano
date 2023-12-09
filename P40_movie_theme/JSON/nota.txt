@@ -1,0 +1,4 @@
+para verlo poner en el navegador:
+http://localhost/JSON/
+
+y tener activado apache y el archivo en la carpeta de xampp
