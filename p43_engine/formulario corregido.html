@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .input__row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        label, button{
+            margin-top: 20px;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+        }
+
+        .eye{
+            width: 16px;
+            position: absolute;
+            top: 41px;
+            left: 150px;
+            cursor: pointer;
+
+        }
+
+    </style>
+
+    <form action="">
+    <div class="input__row">
+        <div class="input__user"><label for="user">Nombre de usuario:</label></div>
+        <input type="text" id="user" name="user">
+    </div>
+
+    <div class="input__row">
+        <label for="password">Contraseña:</label>
+        <input class="input__pwd" type="password" id="password" name="password">
+        <div class="eye"> <img src="img/eye.svg" alt=""></div>
+
+
+
+
+    </div>
+
+        <!--<input type="submit" value="Enviar formulario">-->
+        <button type="button" class="btn">ENVIAR</button>
+      </form>
+
+
+    <script>
+       
+        const inputUser = document.querySelector('.input__user');
+        const usersObject={};
+
+        document.querySelector('.btn').addEventListener('click', handleData);  //no es necesario hacer una constante de btn
+
+
+
+
+
+
+
+        //OJO:
+        const ojo= document.querySelector('.eye img');
+        const inputPwd= document.querySelector('.input__pwd');
+
+        ojo.addEventListener('click', function(){
+            if(inputPwd.type === "password"){
+                inputPwd.type = "text";
+                ojo.src = "img/eye-close.svg";
+            } else{
+                inputPwd.type = "password";
+                ojo.src = "img/eye.svg";
+            }
+        })
+
+
+
+
+
+
+        function handleData() {
+            //obtengo el objeto de localstorage
+            const parsedLocalStorage = localStorage.length ? JSON.parse(localStorage.users) : ""; //preguntar si algo existe y si no existe que este vacio.
+
+            //calculo numero de items del objeto (pares key-value)
+            const storedUsersLength = Object.keys(parsedLocalStorage).length;
+
+            //añado key y value al objeto que voy a guardar
+            usersObject[inputUser.value + Number(storedUsersLength+1)] = inputPwd.value;
+
+            //grabo en local
+            localStorage.setItem('users', JSON.stringify(usersObject))
+          
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //PASOS:
+
+        //1. crear formulario
+
+        //2. crear funcion que será lanzada al hacer click en boton enviar
+
+        //3. La función enviar grabará en localstorage el nombre del usuario
+
+        //4. la función recuperará todos los valores de localstorage
+
+        //5. la funcion comprobará si el nombre de usuario coincide con algún valor de los alamacenados en localStorage.
+
+        //6. si coincide muestra el mensaje "bienvenido de vuelta [user]" encima del formulario.
+
+    </script>
+</body>
+</html>

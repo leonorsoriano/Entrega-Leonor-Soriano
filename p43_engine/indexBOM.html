@@ -15,6 +15,34 @@
         //window.open(url,name,specs)
         // url se añade asi "",
         //name puede ser "_self" que lo abre en la misma pestaña, y  "_black" lo abre en una nueva. se puede lanzar un parent con un iframe.
+       // psrent hace referencia a la web que carga el iframe
+
+
+
+        console.log(window);
+        setTimeout(() => {
+            window.open("https://www.adidas.es/", "_blank", "width=200, height=400, top=300, left=850");
+            //specs: separado con comas: tamaño de ventanna, donde aparece con top y left.
+        }, 5000);
+
+
+
+
+        //objeto location: gestiona todo lo relacionado con la url donde esta la ventana
+        //window.location
+            //window.location.href    si hago log se obtiene la url completa, util para capturar la url en la que estoy, por ejemplo creo un timer y a los 10 segundos se va de la web.
+
+            //window.location.hostname   nos da el dominio, que es la direccion web. es la parte de la url web sin el protocolo, sin https. ej: apple.com
+
+
+            //window.location.pathname    todo lo que hay detras del protocolo y del dominio, ose una ruta ejem: c:user...
+
+
+            //window.location.protocol       ej: file:   o http:
+
+
+            //window.location.assing('http...')      muy importante, navegar a otra url. se puede usar con set time out, pero mejor hreft si no lo quiero automatico. esto es util para el login.
+
 
     </script>
 </body>

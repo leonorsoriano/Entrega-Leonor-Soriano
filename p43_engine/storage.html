@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //grabación
+        sessionStorage.setItem("user", "mixmastermike"); //cierro pestaña y desaparece
+
+        sessionStorage.setItem("user2", "hola");
+        sessionStorage.setItem("user3", "hola2");
+        sessionStorage.setItem("user4", "hola3");
+
+
+        //recuperación
+        sessionStorage.getItem("user"); //le doy el key y me da el value
+    
+        //borrado de dato
+        sessionStorage.removeItem("user"); //se le pasa el key que quiero borrar
+
+        //borrado masivo
+        sessionStorage.clear();
+
+
+
+        //local es igual pero si cierro el navegador y lo vuelvo a abrir sigue ahí guardado.
+        localStorage.setItem("user", "hola"); 
+
+
+
+
+    </script>
+</body>
+</html>
