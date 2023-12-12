@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* exponential(n) {
+
+            yield n * n;
+            yield n * n * n;
+            yield n * n * n * n;
+            yield n * n * n * n * n;
+        }
+
+        const myGenerator = exponential(3);
+
+        console.log(myGenerator.next());
+        console.log(myGenerator.next());
+        console.log(myGenerator.next());
+        console.log(myGenerator.next());
+        console.log(myGenerator.next());
+    </script>
+</body>
+</html>

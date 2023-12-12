@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //funciones generadoras: permite valores de retorno multiple
+        //puedo hacer que la iteracion avance cuando yo quiera
+        //1.definición-funcion generadora
+        function* myGen() {
+            yield "primer valor del retorno";
+            yield "segundo valor del retorno";
+            yield "tercer valor del retorno";
+        }
+
+        //2.Guardo la ejecución de la funcion en variable
+        const generador = myGen();
+
+        //3. ejecuto los YIELDS llamando a next();
+        console.log(generador.next());
+        console.log(generador.next());
+        console.log(generador.next());
+        console.log(generador.next());
+
+
+    </script>
+</body>
+</html>

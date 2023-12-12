@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slot" style="height: 100px; border: 2px solid black;"></div>
+    <button class="el-primo">LANZAR PRIMO</button>
+    <script>
+        //EJERCICIO: Crea un boton que pinte de uno en uno los 10 primeros numeros primos cada vez que se haga click. No puede pintar nada que no sea un número primo.
+
+
+        const btn = document.querySelector('.el-primo');
+        const slot = document.querySelector('.slot');
+
+        function* primos() {
+            yield 2;
+            yield 3;
+            yield 5;
+            yield 7;
+            yield 11;
+            yield 13;
+            yield 17;
+            yield 19;
+            yield 23;
+            yield 29;
+        };
+
+        let GeneratorItem = primos();
+
+        btn.addEventListener('click', function() {
+
+            const nextItem = GeneratorItem.next();
+            const nextValue = nextItem.value; //guardo dato
+            const isDone = nextItem.done;
+
+            slot.innerHTML = nextValue ? nextValue: ""; //si hay dato es true y si no hay dato es false. Pinto sato si no es indefined.
+
+            //reiniciar el generador cuando llegue al final
+            isDone && (GeneratorItem = primos());
+        });
+
+        
+    </script>
+</body>
+</html>

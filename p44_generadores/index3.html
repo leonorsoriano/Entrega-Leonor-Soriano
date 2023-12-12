@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* exponential() {
+
+            yield 3 * 3;
+            yield 3 * 3 * 3;
+            yield 3 * 3 * 3 * 3;
+            yield 3 * 3 * 3 * 3 * 3;
+        }
+
+        const myGenerator = exponential();
+
+        console.log(myGenerator.next());
+        console.log(myGenerator.return(2342));
+        console.log(myGenerator.throw(new Error("error custom creado por GSUS")));
+       
+    </script>
+</body>
+</html>
