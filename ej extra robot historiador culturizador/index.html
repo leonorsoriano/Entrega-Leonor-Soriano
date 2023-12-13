@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    img{
+        width: 100%;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .container{
+        margin: 80px;
+        border: 40px solid gray;
+        border-radius: 20px;
+        animation: parpadeo 5s infinite;
+    }
+
+    @keyframes parpadeo {
+        0% { box-shadow: 0 0 20px white; }
+        50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0); }
+        100% { box-shadow: 0 0 20px white; }
+        }
+
+    .container__img {
+    width: 400px;
+    height: 300px;
+    background-color: yellowgreen;
+    background-size: cover;
+    background-position: center;
+    }
+
+    .container__text {
+    width: 400px;
+    height: 100px;
+    background-color: orange;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    }
+
+   
+
+    .button {
+    width: 400px;
+    height: 50px;
+    background-color: lightcoral;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    }
+
+    </style>
+
+
+    <div class="container">
+        <div class="container__img"></div>
+        <div class="container__text"></div>
+        <button class="button">Click Me</button>
+    </div>
+
+    <script>
+        const database = {
+            "hito1": {
+                "image": "img/america.jpg",
+                "text": "Descubrimiento de América: el 12 de octubre de 1492"
+            },
+            "hito2": {
+                "image": "img/roma.jpg",
+                "text": "Caída del Imperio Romano: el 4 de septiembre de 476"
+            },
+            "hito3": {
+                "image": "img/apolo11.jpg",
+                "text": "Primer hombre en pisar la Luna: Neil Armstrong, el 20 de julio de 1969"
+            },
+            "hito4": {
+                "image": "img/berlin.jpg",
+                "text": "Caída del Muro de Berlín: En el año 1989"
+            },
+            "hito5": {
+                "image": "img/guerra.jpg",
+                "text": "Primera Guerra Mundial: 28 de julio de 1914"
+            },
+            "hito6": {
+                "image": "img/imprenta.jpg",
+                "text": "Invención de la imprenta: Johannes Gutenberg, en el año 1440"
+            },
+        };
+
+    
+        const containerImg = document.querySelector('.container__img');
+        const containerText = document.querySelector('.container__text');
+        const button = document.querySelector('.button');
+
+
+        button.addEventListener('click', mostrarHitos);
+
+        let hitos = Object.keys(database);
+        let hitosMostrados = [];
+
+        function mostrarHitos() {
+            if (hitos.length === 0) {
+                hitos = Object.keys(database);
+                hitosMostrados = [];
+            }
+
+            const index = Math.floor(Math.random() * hitos.length);
+            const hito = hitos[index];
+            hitos.splice(index, 1);
+            hitosMostrados.push(hito);
+
+            containerImg.style.backgroundImage = `url(${database[hito].image})`;
+            containerText.textContent = database[hito].text;
+        }
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
