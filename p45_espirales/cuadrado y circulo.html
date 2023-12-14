@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border: 2px solid black;"></canvas>
+
+    <script>
+        //capturo canvas
+        const myCanvas = document.getElementById("myCanvas");
+
+        //le creo un contexto
+        const ctx = myCanvas.getContext("2d");
+
+        //rectángulo
+        ctx.beginPath(); //limpio subtrazos e inicio trazo nuevo
+        ctx.lineWidth= "1"; //ancho del trazo
+        ctx.strokeStyle= "#F00"; //color del trazo
+        ctx.rect(5.5,9,65,44); //crear el rectángulo
+        ctx.stroke(); //acción de pintar
+
+
+
+        //círculo
+        for (let index = 0; index < 20; index++) {
+            
+                ctx.beginPath(); //limpio subtrazos e inicio trazo nuevo
+                ctx.lineWidth= "2"; //ancho del trazo
+                ctx.strokeStyle= "#0F0"; //color del trazo
+                ctx.arc(10*index,100,20,0,2*Math.PI); //crear el círculo 2*Math.PI es lo mismo que 360 grados pero en radianes
+                ctx.stroke();//acción de pintar
+
+
+
+
+                //trazo
+             /*   ctx.beginPath();
+                ctx.lineWidth= "2";
+                ctx.strokeStyle="#00F";
+
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(300,300);
+
+                ctx.stroke();*/
+        }
+
+
+       
+        
+
+    </script>
+
+</body>
+</html>

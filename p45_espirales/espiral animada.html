@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <canvas id="myCanvas" width="400" height="400" style="border: 2px solid black;"></canvas>
+
+    <script>
+        
+        //capturo canvas
+        const myCanvas = document.getElementById("myCanvas");
+        myCanvas.width = window.innerWidth;
+        myCanvas.height = window.innerHeight;
+
+        //le creo un contexto
+        const ctx = myCanvas.getContext("2d");
+
+        //espiral:
+
+        //defino los centros
+        var centerX = window.innerWidth/2;
+        var centerY = window.innerHeight/2;
+
+        //posiciono el pincel en el centro
+        ctx.moveTo(centerX, centerY);
+
+        //cambio el color del background
+        ctx.fillstyle= "black";
+        ctx.fillRect(0,0,myCanvas.width, myCanvas.height);
+
+        //parametros para nutrir el bucle y la espiral
+        //espacio entre lineas de la espiral
+        let gap= 2;
+        //incremento resolucion de la espiral
+        let increment = 1;
+        //valor de incremento aplicado a la formula
+        let theta = increment;
+
+        function animate() {
+
+            let newX = centerX + theta * Math.cos(theta) *gap;
+            let newY = centerY + theta * Math.sin(theta)* gap;
+
+            const color = `hsl(${theta}deg, 100%, 50%)`;
+            ctx.strokeStyle = color;
+            ctx.lineTo(newX, newY);
+            ctx.stroke();
+
+            theta = theta + increment;
+
+            window.requestAnimationFrame(function(){
+                if(theta === 300) return;
+
+                animate();
+            })
+        }
+
+        animate();
+
+        window.addEventListener('resize', function(e){
+            console.log('resizing');
+            myCanvas.width = window.innerWidth;
+            myCanvas.height = window.innerHeight;
+        })
+
+        
+
+
+
+
+
+    </script>
+
+</body>
+</html>
